@@ -1,0 +1,102 @@
+/* header */
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+input[type="text"] {
+    width: 660px;
+    height: 25px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #ffffff;
+    background-color: transparent;
+}
+input[type="text"]:focus {
+    outline: none;
+    caret-color: #ffffff;
+    color: #ffffff;
+}
+.header_box {
+    width: 1425px;
+    height: 10vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+.header_ul {
+    width: 1425px;
+    height: 8vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.header_li {
+    display: block;
+    padding: 10px 17px 10px 17px;
+    list-style: none;
+}
+.header_li a {
+    font-size: 18px;
+}
+.header_li_active {
+    border-bottom: 1px solid blue;
+    color: blue;
+}
+.search_box {
+    display: none;
+    width: 662ßpx;
+    height: 30px;
+}
+.search_icon_box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 20px;
+}
+.search_icon {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.cancel_icon {
+    display: none;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.divide_line {
+    border: 0.5px solid #ffffff;
+    width: 0.1px;
+    height: 30px;
+    margin: 0 20px 0 20px;
+}
+.header_li_logo_box {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.logo {
+    width: 60px;
+    height: 60px;
+}
+.logo::marker {
+    display: none;
+}
+
+/* content */
+.main_bg_box {
+    width: 1425px;
+    height: 90vh;
+    background-image: url('/img/2022-BMW-2-Series-Coupe-main.jpeg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
