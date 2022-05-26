@@ -5,6 +5,8 @@ let search_box = document.querySelector('.search_box');
 let search_icon = document.querySelector('.search_icon');
 let search_input = document.querySelector('.search_input');
 let cancel_icon = document.querySelector('.cancel_icon');
+let tab_menu_a = document.querySelector('.tab_menu_a');
+let m_nav_menu = document.querySelector('.m_nav_menu');
 
 header_li_a.forEach(element => {
     element.addEventListener('mouseover', () => {
@@ -34,4 +36,8 @@ cancel_icon.addEventListener('click', () => {
     cancel_icon.style.display = 'none';
     search_box.style.display = 'none';
     search_input.value = '';
+})
+
+tab_menu_a.addEventListener('click', () => {
+    
 })
