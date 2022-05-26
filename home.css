@@ -112,6 +112,9 @@ input[type="text"]:focus {
         display: flex;
         justify-content: center;
     }
+    .m_nav_menu {
+        display: none;
+    }
 } 
   
 /* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
@@ -222,6 +225,9 @@ input[type="text"]:focus {
         height: 680px;
         background-size: contain;
     }
+    .m_nav_menu {
+        display: none;
+    }
 } 
 
 /* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
@@ -331,6 +337,9 @@ input[type="text"]:focus {
         width: 90vw;
         height: 330px;
         background-size: contain;
+    }
+    .m_nav_menu {
+        display: none;
     }
 }
 
