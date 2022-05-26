@@ -131,9 +131,10 @@ input[type="text"]:focus {
         height: 78px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
         padding: 0;
+        margin: 0 0 0 80px;
     }
     .header_ul > .header_li {
         display: none;
@@ -240,9 +241,10 @@ input[type="text"]:focus {
         height: 78px;
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: flex-start;
         align-items: center;
         padding: 0;
+        margin: 0 0 0 60px;
     }
     .header_ul > .header_li {
         display: none;
