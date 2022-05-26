@@ -229,7 +229,7 @@ input[type="text"]:focus {
     /* header */
     .header_box {
         width: 100vw;
-        height: 97px;
+        height: 50px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -244,7 +244,7 @@ input[type="text"]:focus {
         justify-content: flex-start;
         align-items: center;
         padding: 0;
-        margin: 0 0 0 60px;
+        margin: 0 0 0 40px;
     }
     .header_ul > .header_li {
         display: none;
