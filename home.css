@@ -1,13 +1,14 @@
-/* header */
+/* 공통 */
 a {
     text-decoration: none;
     color: #ffffff;
+    outline-style: none;
 }
 li {
     list-style: none;
 }
 input[type="text"] {
-    width: 660px;
+    width: 740px;
     height: 25px;
     border-top: 0;
     border-left: 0;
@@ -20,84 +21,316 @@ input[type="text"]:focus {
     caret-color: #ffffff;
     color: #ffffff;
 }
-.header_box {
-    width: 1425px;
-    height: 10vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-}
-.header_ul {
-    width: 1425px;
-    height: 8vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-.header_li {
-    display: block;
-    padding: 10px 17px 10px 17px;
-    
-}
-.header_li a {
-    font-size: 18px;
-}
-.header_li_active {
-    border-bottom: 1px solid blue;
-    color: blue;
-}
-.search_box {
-    display: none;
-    width: 662ßpx;
-    height: 30px;
-}
-.search_icon_box {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0 0 0 20px;
-}
-.search_icon {
-    width: 40px;
-    height: 40px;
-    cursor: pointer;
-}
-.cancel_icon {
-    display: none;
-    width: 30px;
-    height: 30px;
-    cursor: pointer;
-}
-.divide_line {
-    border: 0.5px solid #ffffff;
-    width: 0.1px;
-    height: 30px;
-    margin: 0 20px 0 20px;
-    
-}
-.header_li_logo_box {
-    width: 70px;
-    height: 70px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.logo {
-    width: 60px;
-    height: 60px;
+
+/* PC (해상도 1024px)*/ 
+@media all and (min-width:1024px) {
+    /* header */
+    .header_box {
+        width: 100vw;
+        height: 97px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    .header_box > .header_ul {
+        width: 100vw;
+        height: 78px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .header_ul > .header_li {
+        display: block;
+        padding: 10px 17px 10px 17px;
+    }
+    .header_ul > .tab_menu_li {
+        display: none;
+    }
+    .header_li > a {
+        font-size: 18px;
+    }
+    .tab_menu_li > .tab_menu_a {
+        display: none;
+    }
+    .tab_menu_a > .tab_menu {
+        display: none;
+    }
+    .header_li_active {
+        border-bottom: 1px solid blue;
+        color: blue;
+    }
+    .search_box {
+        display: none;
+        width: 740px;
+        height: 30px;
+    }
+    .search_icon_box {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 20px;
+    }
+    .search_icon_box > .search_icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+    }
+    .search_icon_box > .cancel_icon {
+        display: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+    }
+    .divide_line {
+        border: 0.5px solid #ffffff;
+        width: 0.1px;
+        height: 30px;
+        margin: 0 20px 0 20px;
+        
+    }
+    .header_li_logo_box {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header_li_logo_box > .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    /* content */
+    .main_bg_box {
+        width: 100vw;
+        height: 872px;
+        display: flex;
+        justify-content: center;
+    }
+} 
+  
+/* 테블릿 가로, 테블릿 세로 (해상도 768px ~ 1023px)*/ 
+@media all and (min-width:768px) and (max-width:1023px) {
+    /* header */
+    .header_box {
+        width: 100vw;
+        height: 97px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    .header_box > .header_ul {
+        width: 100vw;
+        height: 78px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+    }
+    .header_ul > .header_li {
+        display: none;
+    }
+    .header_ul > .tab_menu_li {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    .tab_menu_li > .tab_menu_a {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    .tab_menu_a > .tab_menu {
+        display: block;
+        width: 40px;
+        height: 40px;
+    }
+    .header_li > a {
+        font-size: 18px;
+        display: none;
+    }
+    .header_li_active {
+        border-bottom: 1px solid blue;
+        color: blue;
+    }
+    .search_box {
+        display: none;
+        width: 662px;
+        height: 30px;
+    }
+    .search_icon_box {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 20px;
+        display: none;
+    }
+    .search_icon_box > .search_icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    .search_icon_box > .cancel_icon {
+        display: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    .divide_line {
+        border: 0.5px solid #ffffff;
+        width: 0.1px;
+        height: 30px;
+        margin: 0 20px 0 20px;
+        display: none;
+    }
+    .header_li_logo_box {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .header_li_logo_box > .logo {
+        width: 60px;
+        height: 60px;
+        display: none;
+    }
+
+    /* content */
+    .main_bg_box {
+        width: 100vw;
+        height: 680px;
+        display: flex;
+        justify-content: center;
+    }
+    .main_bg {
+        width: 90vw;
+        height: 680px;
+        background-size: contain;
+    }
+} 
+
+/* 모바일 가로, 모바일 세로 (해상도 480px ~ 767px)*/ 
+@media all and (max-width:767px) {
+    /* header */
+    .header_box {
+        width: 100vw;
+        height: 97px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+    }
+    .header_box > .header_ul {
+        width: 100vw;
+        height: 78px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 0;
+    }
+    .header_ul > .header_li {
+        display: none;
+    }
+    .header_ul > .tab_menu_li {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+    .tab_menu_li > .tab_menu_a {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+    .tab_menu_a > .tab_menu {
+        display: block;
+        width: 20px;
+        height: 20px;
+    }
+    .header_li > a {
+        font-size: 18px;
+        display: none;
+    }
+    .header_li_active {
+        border-bottom: 1px solid blue;
+        color: blue;
+    }
+    .search_box {
+        display: none;
+        width: 662px;
+        height: 30px;
+    }
+    .search_icon_box {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0 0 20px;
+        display: none;
+    }
+    .search_icon_box > .search_icon {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    .search_icon_box > .cancel_icon {
+        display: none;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    .divide_line {
+        border: 0.5px solid #ffffff;
+        width: 0.1px;
+        height: 30px;
+        margin: 0 20px 0 20px;
+        display: none;
+    }
+    .header_li_logo_box {
+        width: 70px;
+        height: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        display: none;
+    }
+    .header_li_logo_box > .logo {
+        width: 60px;
+        height: 60px;
+        display: none;
+    }
+
+    /* content */
+    .main_bg_box {
+        width: 100vw;
+        height: 330px;
+        display: flex;
+        justify-content: center;
+    }
+    .main_bg {
+        width: 90vw;
+        height: 330px;
+        background-size: contain;
+    }
 }
 
-/* content */
-.main_bg_box {
-    width: 1425px;
-    height: 90vh;
-    background-image: url('/img/2022-BMW-2-Series-Coupe-main.jpeg');
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: center;
-}
+
+
