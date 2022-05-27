@@ -40,4 +40,5 @@ cancel_icon.addEventListener('click', () => {
 
 tab_menu_a.addEventListener('click', () => {
     console.log('mobile tab click');
+    console.log('test');
 })
