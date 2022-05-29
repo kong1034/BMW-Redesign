@@ -124,6 +124,8 @@ input[type="text"]:focus {
         display: flex;
         justify-content: center;
         flex-direction: row;
+        
+        transition: all 0.85s ease;
     }
     .main_bg_box > .main_bg_div {
         width: 100vw;
@@ -136,8 +138,8 @@ input[type="text"]:focus {
     }
     .left_arrow_box {
         position: absolute;
-        top: 50%;
-        left: 100px;
+        top: 40%;
+        left: 1vw;
         width: 50px;
         height: 50px;
         cursor: pointer;
@@ -174,6 +176,7 @@ input[type="text"]:focus {
         justify-content: center;
         align-items: center;
         position: absolute;
+        z-index: 1;
     }
     .header_box > .header_ul {
         width: 100vw;
@@ -239,6 +242,7 @@ input[type="text"]:focus {
         justify-content: center;
         align-items: center;
         transition: 0.3s;
+        z-index: 2;
     }
     .m_header_li {
         margin: 30px 0;
@@ -293,6 +297,7 @@ input[type="text"]:focus {
         display: flex;
         justify-content: center;
         flex-direction: row;
+        transition: all 0.85s ease;
     }
     .main_bg_box > .main_bg_div {
         width: 100vw;
@@ -306,8 +311,8 @@ input[type="text"]:focus {
     }
     .left_arrow_box {
         position: absolute;
-        top: 50%;
-        left: 100px;
+        top: 25%;
+        left: 4vw;
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -344,6 +349,7 @@ input[type="text"]:focus {
         justify-content: center;
         align-items: center;
         position: absolute;
+        z-index: 1;
     }
     .header_box > .header_ul {
         width: 100vw;
@@ -408,6 +414,7 @@ input[type="text"]:focus {
         justify-content: center;
         align-items: center;
         transition: 0.3s;
+        z-index: 2;
     }
     .m_header_li {
         margin: 1rem 0;
@@ -461,6 +468,7 @@ input[type="text"]:focus {
         display: flex;
         justify-content: center;
         flex-direction: row;
+        transition: all 0.85s ease;
     }
     .main_bg_box > .main_bg_div {
         width: 100vw;
@@ -474,8 +482,8 @@ input[type="text"]:focus {
     }
     .left_arrow_box {
         position: absolute;
-        top: 50%;
-        left: 100px;
+        top: 25%;
+        left: 1vw;
         width: 25px;
         height: 25px;
         cursor: pointer;
