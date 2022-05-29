@@ -5,8 +5,12 @@ let search_box = document.querySelector('.search_box');
 let search_icon = document.querySelector('.search_icon');
 let search_input = document.querySelector('.search_input');
 let cancel_icon = document.querySelector('.cancel_icon');
+let left_arrow_box = document.querySelector('.left_arrow_box');
+let right_arrow_box = document.querySelector('.right_arrow_box');
 let tab_menu_a = document.querySelector('.tab_menu_a');
 let m_nav_menu = document.querySelector('.m_nav_menu');
+let m_header_overlay = document.querySelector('.m_header_overlay');
+let m_header_cancel_img = document.querySelector('.m_header_cancel_img');
 
 header_li_a.forEach(element => {
     element.addEventListener('mouseover', () => {
@@ -39,5 +43,12 @@ cancel_icon.addEventListener('click', () => {
 })
 
 tab_menu_a.addEventListener('click', () => {
-    console.log('mobile tab click');
+    m_header_overlay.classList.add('visible');
+    right_arrow_box.style.display = 'none';
+    left_arrow_box.style.display = 'none';
+})
+m_header_cancel_img.addEventListener('click', () => {
+    m_header_overlay.classList.remove('visible');
+    right_arrow_box.style.display = 'block';
+    left_arrow_box.style.display = 'block';
 })

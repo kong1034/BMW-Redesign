@@ -110,7 +110,7 @@ input[type="text"]:focus {
         height: 60px;
     }
     /* 태블릿 모바일 */
-    .m_nav_menu {
+    .m_header_overlay {
         display: none;
     }
 
@@ -203,14 +203,6 @@ input[type="text"]:focus {
         width: 30px;
         height: 30px;
     }
-    .header_li > a {
-        font-size: 18px;
-        display: none;
-    }
-    .header_li_active {
-        border-bottom: 1px solid blue;
-        color: blue;
-    }
     .search_box {
         display: none;
         width: 662px;
@@ -225,26 +217,6 @@ input[type="text"]:focus {
         margin: 0 0 0 20px;
         display: none;
     }
-    .search_icon_box > .search_icon {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        display: none;
-    }
-    .search_icon_box > .cancel_icon {
-        display: none;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        display: none;
-    }
-    .divide_line {
-        border: 0.5px solid #ffffff;
-        width: 0.1px;
-        height: 30px;
-        margin: 0 20px 0 20px;
-        display: none;
-    }
     .header_li_logo_box {
         width: 70px;
         height: 70px;
@@ -253,14 +225,49 @@ input[type="text"]:focus {
         align-items: center;
         display: none;
     }
-    .header_li_logo_box > .logo {
-        width: 60px;
-        height: 60px;
-        display: none;
-    }
     /* 태블릿, 모바일 */
-    .m_nav_menu {
-        display: none;
+    .m_header_overlay {
+        position: fixed;
+        background: #0066B1;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
+    }
+    .m_header_li {
+        margin: 30px 0;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .m_header_li > a {
+        font-size: 40px;
+        opacity: 0.75;
+        transition: opacity 0.2s ease;
+    }
+    .m_header_li > a:hover {
+        opacity: 1;
+    }
+    .m_header_overlay.visible {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .m_header_cancel_img {
+        width: 30px;
+        height: 30px;
+        opacity: 0.75;
+        transition: opacity 0.2s ease;
+    }
+    .m_header_cancel_img:hover {
+        opacity: 1;
+        cursor: pointer;
     }
 
     /* content */
@@ -366,14 +373,6 @@ input[type="text"]:focus {
         width: 25px;
         height: 25px;
     }
-    .header_li > a {
-        font-size: 18px;
-        display: none;
-    }
-    .header_li_active {
-        border-bottom: 1px solid blue;
-        color: blue;
-    }
     .search_box {
         display: none;
         width: 662px;
@@ -388,26 +387,6 @@ input[type="text"]:focus {
         margin: 0 0 0 20px;
         display: none;
     }
-    .search_icon_box > .search_icon {
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        display: none;
-    }
-    .search_icon_box > .cancel_icon {
-        display: none;
-        width: 30px;
-        height: 30px;
-        cursor: pointer;
-        display: none;
-    }
-    .divide_line {
-        border: 0.5px solid #ffffff;
-        width: 0.1px;
-        height: 30px;
-        margin: 0 20px 0 20px;
-        display: none;
-    }
     .header_li_logo_box {
         width: 70px;
         height: 70px;
@@ -416,13 +395,48 @@ input[type="text"]:focus {
         align-items: center;
         display: none;
     }
-    .header_li_logo_box > .logo {
-        width: 60px;
-        height: 60px;
-        display: none;
+    .m_header_overlay {
+        position: fixed;
+        background: #0066B1;
+        top: 0;
+        left: 0;
+        width: 0;
+        height: 100%;
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: 0.3s;
     }
-    .m_nav_menu {
-        display: none;
+    .m_header_li {
+        margin: 1rem 0;
+        opacity: 1;
+        display: flex;
+        justify-content: center;
+    }
+    .m_header_li > a {
+        font-size: 40px;
+        opacity: 0.75;
+        transition: opacity 0.2s ease;
+    }
+    .m_header_li > a:hover {
+        opacity: 1;
+    }
+    .m_header_overlay.visible {
+        width: 100%;
+        opacity: 1;
+        visibility: visible;
+    }
+    .m_header_cancel_img {
+        width: 30px;
+        height: 30px;
+        opacity: 0.75;
+        transition: opacity 0.2s ease;
+    }
+    .m_header_cancel_img:hover {
+        opacity: 1;
+        cursor: pointer;
     }
 
     /* content */
@@ -486,6 +500,3 @@ input[type="text"]:focus {
         transform: rotateY(180deg);
     }
 }
-
-
-
