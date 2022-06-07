@@ -20,8 +20,8 @@ let pod_right_arrow_box = document.querySelector('.pod_right_arrow_box');
 let pod_left_arrow = document.querySelector('.pod_left_arrow');
 let pod_right_arrow = document.querySelector('.pod_right_arrow');
 let podcast_img_container = document.querySelector('.podcast_img_container');
-let bmw_podcast_container = document.querySelector('.bmw_podcast_container');
-let pod_img_idx = 0;
+let podcast_img_box = document.querySelector('.podcast_img_box');
+let pod_img_idx = 1;
 
 /* nav 메뉴 */
 header_li_a.forEach(element => {
@@ -91,28 +91,66 @@ left_arrow_box.addEventListener('click', () => {
     }
 })
 /* podcast 이미지 슬라이더 */
-pod_left_arrow_box.addEventListener('click', () => {
-    pod_img_idx += 70;
-    podcast_img_container.style.transform = `translateX(${pod_img_idx}vw)`;
-    console.log('left pod img idx check '+pod_img_idx);
-    if(pod_img_idx < 0) {
-        pod_right_arrow_box.style.display = 'block';
-        pod_right_arrow.style.display = 'block';
-    }
-    if(pod_img_idx == 0){
-        pod_left_arrow_box.style.display = 'none';
-        pod_left_arrow.style.display = 'none';
-    }
-});
-pod_right_arrow_box.addEventListener('click', () => {
-    pod_img_idx -= 70;
-    podcast_img_container.style.transform = `translateX(${pod_img_idx}vw)`;
-    console.log('right pod img idx check '+pod_img_idx);
-    if(pod_img_idx < 0) {
-        pod_left_arrow_box.style.display = 'block';
-        pod_left_arrow.style.display = 'block';
-    }
-    if(pod_img_idx == -140){
-        pod_right_arrow_box.style.display = 'none';
+$('.podcast_img_box').slick({
+    dots: false,
+    infinite: false,
+    speed: 300,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    prevArrow: $('.pod_left_arrow_box'),
+    nextArrow: $('.pod_right_arrow_box'),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: false,
+          prevArrow: $('.pod_left_arrow_box'),
+          nextArrow: $('.pod_right_arrow_box')
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+  });
+$('.pod_right_arrow_box').click(function() {
+    if(9 > $('.podcast_img_box').slick('slickCurrentSlide') > 0) {
+        $('.pod_left_arrow_box').css('display', 'block');
+        $('.pod_left_arrow').css('display', 'block');
+    } else if($('.podcast_img_box').slick('slickCurrentSlide') == 9) {
+        $('.pod_right_arrow_box').css('display', 'none');
+        $('.pod_right_arrow').css('display', 'none');
+    } else {
+        $('.pod_left_arrow_box').css('display', 'none');
+        $('.pod_left_arrow').css('display', 'none');
     }
 })
+$('.pod_left_arrow_box').click(function() {
+    if($('.podcast_img_box').slick('slickCurrentSlide')<9 && $('.podcast_img_box').slick('slickCurrentSlide') != 0) {
+        console.log('why?')
+        $('.pod_right_arrow_box').css('display', 'block');
+        $('.pod_right_arrow').css('display', 'block');
+    } else if($('.podcast_img_box').slick('slickCurrentSlide') == 0) {
+        console.log('check left slide position zero???')
+        $('.pod_left_arrow_box').css('display', 'none');
+        $('.pod_left_arrow').css('display', 'none');
+    }
+})
+ 
