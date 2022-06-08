@@ -64,30 +64,66 @@ m_header_cancel_img.addEventListener('click', () => {
     left_arrow_box.style.display = 'block';
 })
 /* 메인 이미지 슬라이더 */
-right_arrow_box.addEventListener('click', () => {
-    main_bg_idx -= 100;
-    console.log('check main_bg_idx => '+main_bg_idx);
-    main_bg_box.style.transform = `translateX(${main_bg_idx}vw)`;
-
-    if(main_bg_idx < 0) {
-        left_arrow_box.style.display = 'block';
-        left_arrow.style.display = 'block';
-    }
-    if(main_bg_idx == -200){
-        right_arrow_box.style.display = 'none';
+$('.main_bg_box').slick({
+    dots: false,
+    infinite: false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    prevArrow: $('.left_arrow_box'),
+    nextArrow: $('.right_arrow_box'),
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: false,
+          dots: false,
+          prevArrow: $('.left_arrow_box'),
+          nextArrow: $('.right_arrow_box')
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+      // You can unslick at a given breakpoint now by adding:
+      // settings: "unslick"
+      // instead of a settings object
+    ]
+})
+$('.right_arrow_box').click(function() {
+    if(2 > $('.main_bg_box').slick('slickCurrentSlide') > 0) {
+        $('.left_arrow_box').css('display', 'block');
+        $('.left_arrow').css('display', 'block');
+    } else if($('.main_bg_box').slick('slickCurrentSlide') == 2) {
+        $('.right_arrow_box').css('display', 'none');
+        $('.right_arrow').css('display', 'none');
+    } else {
+        $('.left_arrow_box').css('display', 'none');
+        $('.left_arrow').css('display', 'none');
     }
 })
-left_arrow_box.addEventListener('click', () => {
-    main_bg_idx += 100;
-    main_bg_box.style.transform = `translateX(${main_bg_idx}vw)`;
-    console.log('check main_bg_idx => '+main_bg_idx);
-    if(main_bg_idx == -100) {
-        right_arrow_box.style.display = 'block';
-        right_arrow.style.display = 'block';
-    }
-    if(main_bg_idx == 0){
-        left_arrow_box.style.display = 'none';
-        left_arrow.style.display = 'none';
+$('.left_arrow_box').click(function() {
+    if($('.main_bg_box').slick('slickCurrentSlide')<2 && $('.main_bg_box').slick('slickCurrentSlide') != 0) {
+        console.log('why?')
+        $('.right_arrow_box').css('display', 'block');
+        $('.right_arrow').css('display', 'block');
+    } else if($('.main_bg_box').slick('slickCurrentSlide') == 0) {
+        console.log('check left slide position zero???')
+        $('.left_arrow_box').css('display', 'none');
+        $('.left_arrow').css('display', 'none');
     }
 })
 /* podcast 이미지 슬라이더 */
