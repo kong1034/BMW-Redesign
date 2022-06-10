@@ -80,8 +80,11 @@ input[type="text"]:focus {
     }
     .search_box {
         display: none;
-        width: 739px;
+        width: 706px;
         height: 30px;
+    }
+    .search_box > .search_input {
+        width: 99%;
     }
     .search_icon_box {
         width: 50px;
@@ -236,7 +239,6 @@ input[type="text"]:focus {
     .bmw_podcast_container > .podcast_txt_container {
         width: 350px;
         height: 455px;
-        border: 1px solid #fff;
     }
     .bmw_podcast_container > .podcast_img_container {
         position: relative;
@@ -255,7 +257,6 @@ input[type="text"]:focus {
     .podcast_txt_container > .podcast_txt_top {
         width: 350px;
         height: 255px;
-        border: 1px solid #fff;
     }
     .podcast_txt_top > h1 {
         font-size: 43px;
@@ -266,7 +267,6 @@ input[type="text"]:focus {
     .podcast_txt_container > .podcast_txt_bottom {
         width: 350px;
         height: 200px;
-        border: 1px solid #fff;
     }
     .podcast_txt_bottom > bold {
         color: #fff;
@@ -312,7 +312,7 @@ input[type="text"]:focus {
     }
     .pod_left_arrow_box {
         position: absolute;
-        top: 2030px;
+        top: 2150px;
         left: 570px;
         width: 30px;
         height: 30px;
@@ -326,8 +326,8 @@ input[type="text"]:focus {
     }
     .pod_right_arrow_box {
         position: absolute;
-        top: 2030px;
-        left: 1800px;
+        top: 2150px;
+        left: 1755px;
         width: 30px;
         height: 30px;
         cursor: pointer;
