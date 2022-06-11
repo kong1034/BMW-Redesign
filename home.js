@@ -75,12 +75,25 @@ $('.main_bg_box').slick({
     slidesToScroll: 1,
     prevArrow: $('.left_arrow_box'),
     nextArrow: $('.right_arrow_box'),
+    draggable: false,
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 820,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
+          draggable: false,
+          prevArrow: $('.left_arrow_box'),
+          nextArrow: $('.right_arrow_box')
+        }
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: false,
           dots: false,
           prevArrow: $('.left_arrow_box'),
@@ -88,17 +101,14 @@ $('.main_bg_box').slick({
         }
       },
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
         breakpoint: 480,
         settings: {
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          infinite: false,
+          dots: false,
+          prevArrow: $('.left_arrow_box'),
+          nextArrow: $('.right_arrow_box')
         }
       }
       // You can unslick at a given breakpoint now by adding:
@@ -131,42 +141,32 @@ $('.left_arrow_box').click(function() {
 })
 /* podcast 이미지 슬라이더 */
 $('.podcast_img_box').slick({
-    dots: false,
-    infinite: false,
-    speed: 300,
-    slidesToShow: 3,
-    slidesToScroll: 3,
-    prevArrow: $('.pod_left_arrow_box'),
-    nextArrow: $('.pod_right_arrow_box'),
+  dots: false,
+  infinite: false,
+  speed: 500,
+  draggable: false,
+  prevArrow: $('.pod_left_arrow_box'),
+  nextArrow: $('.pod_right_arrow_box'),
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1180,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
-          infinite: false,
+          draggable: false
+        }
+      },
+      {
+        breakpoint: 768,
+        settings: {
           dots: false,
-          prevArrow: $('.pod_left_arrow_box'),
-          nextArrow: $('.pod_right_arrow_box')
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
+          infinite: false,
+          speed: 500,
           slidesToShow: 1,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          draggable: false
         }
       }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
     ]
   });
 $('.pod_right_arrow_box').click(function() {
