@@ -147,28 +147,24 @@ $('.podcast_img_box').slick({
   draggable: false,
   prevArrow: $('.pod_left_arrow_box'),
   nextArrow: $('.pod_right_arrow_box'),
-    responsive: [
-      {
-        breakpoint: 1180,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
-          draggable: false
-        }
-      },
-      {
-        breakpoint: 768,
-        settings: {
-          dots: false,
-          infinite: false,
-          speed: 500,
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          draggable: false
-        }
+  mobileFirst:true,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3
       }
-    ]
-  });
+    },
+    {
+      breakpoint: 768,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+  ]
+});
 $('.pod_right_arrow_box').click(function() {
     if(9 > $('.podcast_img_box').slick('slickCurrentSlide') > 0) {
         $('.pod_left_arrow_box').css('display', 'block');
