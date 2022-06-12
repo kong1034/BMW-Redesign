@@ -340,9 +340,8 @@ input[type="text"]:focus {
 
     /* content txt */
     .main_txt_container {
-        width: 700px;
+        width: 100%;
         height: 25vh;
-        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -351,6 +350,10 @@ input[type="text"]:focus {
         width: 80%;
         height: 20vh;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 50px 0 0 0;
     }
     .main_txt_box > .main_txt_1 {
         font-size: 2rem;
@@ -661,7 +664,6 @@ input[type="text"]:focus {
         position: relative;
         display: flex;
         justify-items: center;
-        border: 1px solid #f23;
     }
     .img_card > img {
         width: 90%;
@@ -671,7 +673,7 @@ input[type="text"]:focus {
     }
     .img_card > .img_info_box {
         position: absolute;
-        top: 68%;
+        top: 67%;
         width: 50%;
         height: 5%;
         padding: 35px 30px 35px 30px;
@@ -769,7 +771,7 @@ input[type="text"]:focus {
     /* header */
     .header_box {
         width: 100vw;
-        height: 78px;
+        height: 50px;
         display: flex;
         flex-direction: row;
         justify-content: center;
@@ -779,31 +781,31 @@ input[type="text"]:focus {
     }
     .header_box > .header_ul {
         width: 100vw;
-        height: 78px;
+        height: 5vh;
         display: flex;
         flex-direction: row;
         justify-content: flex-start;
         align-items: center;
         padding: 0;
-        margin: 0 0 0 40px;
+        margin: 0 0 0 20px;
     }
     .header_ul > .header_li {
         display: none;
     }
     .header_ul > .tab_menu_li {
         display: block;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
     .tab_menu_li > .tab_menu_a {
         display: block;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
     .tab_menu_a > .tab_menu {
         display: block;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
     }
     .search_box {
         display: none;
@@ -877,29 +879,31 @@ input[type="text"]:focus {
         overflow: hidden;
     }
     .main_bg_container > .main_bg_box {
-        width: 300vw;
-        height: 60vh;
+        width: 100vw;
+        height: 26vh;
         display: flex;
         justify-content: center;
         flex-direction: row;
         transition: all 0.85s ease;
+        padding: 0;
     }
     .main_bg_box > .main_bg_li {
         width: 100vw;
+        height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
     }
     .main_bg_li > img {
-        width: 99%;
+        width: 100%;
         height: 100%;
     }
     .left_arrow_box {
         position: absolute;
-        top: 25%;
-        left: 1vw;
-        width: 25px;
-        height: 25px;
+        top: 10%;
+        left: 2vw;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
         display: none;
     }
@@ -910,10 +914,10 @@ input[type="text"]:focus {
     }
     .right_arrow_box {
         position: absolute;
-        top: 25%;
+        top: 10%;
         left: 93vw;
-        width: 25px;
-        height: 25px;
+        width: 20px;
+        height: 20px;
         cursor: pointer;
     }
     .right_arrow_box > img {
@@ -924,25 +928,162 @@ input[type="text"]:focus {
 
     /* second main bg */
     .second_img_container {
-        border: 1px solid black;
         width: 100vw;
-        height: 25vh;
-        background-color: #0066B1;
+        height: 120vh;
+    }
+    .second_img_container > .img_box {
+        width: 100vw;
+        height: 60vh;
+    }
+    .img_box > .second_img_one {
+        width: 100vw;
+        height: 100%;
+    }
+    .img_box > .second_img_two {
+        width: 100vw;
+        height: 100%;
+    }
+
+    /* podcast */
+    .bmw_podcast_container {
+        background-color: #262626;
+        height: 160vh;
+        width: 100vw;
+        border: 1px solid #fff;
+    }
+    .podcast_txt_container > .podcast_btn {
+        border: 1px solid white;
+        width: 200px;
+        height: 45px;
+        margin: 40px 0 40px 95px;
+        text-align: center;
+        line-height: 40px;
+        font-size: 25px;
+        font-weight: bold;
+        color: #fff;
+    }
+    .podcast_btn:hover {
+        background-color: #fff;
+        color: #262626;
+        cursor: pointer;
+    }
+    .bmw_podcast_container > .podcast_txt_container {
+        width: 100vw;
+        height: 100vh;
+    }
+    .bmw_podcast_container > .podcast_img_container {
+        position: relative;
+        width: 100%;
+        height: 34%;
+        margin: 0 0 0 20px;
+    }
+    .podcast_img_container > .podcast_img_box{
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        position: absolute;
+        transition: left .5s ease-out;
+        overflow: hidden;
+    }
+    .podcast_txt_container > .podcast_txt_top {
+        width: 350px;
+        height: 255px;
+        margin: 30px 0 50px 0;
+    }
+    .podcast_txt_top > h1 {
+        font-size: 50px;
+        text-align: start;
+        color: #ffffff;
+        padding: 10px 0 0 10px;
+    }
+    .podcast_txt_container > .podcast_txt_bottom {
+        width: 97vw;
+        height: 47vh;
+        padding: 0 10px 0 10px;
+    }
+    .podcast_txt_bottom > bold {
+        color: #fff;
+        font-size: 26.8px;
+    }
+    .podcast_img_box > .img_card {
+        width: 650px;
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-items: center;
+    }
+    .img_card > img {
+        width: 90%;
+        height: 100%;
+        transition: all .5s ease-out;
+    }
+    .img_card > .img_info_box {
+        position: absolute;
+        top: 80%;
+        width: 310px;
+        height: 80px;
+        padding: 0 20px 0 20px;
+        color: #fff;
+        font-size: 20px;
+    }
+    .img_card:nth-child(3) > .img_info_box {
+        color: #000;
+    }
+    .img_card:nth-child(7) > .img_info_box {
+        color: #000;
+    }
+    .img_card:nth-child(10) > .img_info_box {
+        color: #000;
+    }
+    .img_info_box > img {
+        height: 30px;
+        height: 30px;;
+    }
+    .pod_left_arrow_box {
+        position: absolute;
+        top: 145%;
+        left: 51%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    .pod_left_arrow_box > img {
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    .pod_right_arrow_box {
+        position: absolute;
+        top: 145%;
+        left: 135%;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        display: none;
+    }
+    .pod_right_arrow_box > img {
+        width: 100%;
+        height: 100%;
+        transform: rotateY(180deg);
+        display: none;
     }
 
     /* content txt */
     .main_txt_container {
         width: 100%;
         height: 25vh;
-        margin: 0 auto;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .main_txt_container > .main_txt_box {
         width: 80%;
-        height: 20vh;
+        height: 15vh;
         text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     .main_txt_box > .main_txt_1 {
         font-size: 1.7rem;

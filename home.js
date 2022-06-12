@@ -24,6 +24,9 @@ let pod_right_arrow = document.querySelector('.pod_right_arrow');
 let podcast_img_container = document.querySelector('.podcast_img_container');
 let podcast_img_box = document.querySelector('.podcast_img_box');
 let pod_img_idx = 1;
+let mobile = null;
+let tablet = null;
+let desktop = null;
 
 /* nav 메뉴 */
 header_li_a.forEach(element => {
@@ -66,55 +69,61 @@ m_header_cancel_img.addEventListener('click', () => {
     right_arrow_box.style.display = 'block';
     left_arrow_box.style.display = 'block';
 })
+/* 크기 리사이징 및 슬릭 적용 */
+// let resizeWidth = () => {
+//   clearTimeout();
+//   setTimeout(() => {
+//     if($(window).width() < 1024) {
+//       return tablet = 1;
+//     } else if($(window).width() > 1024) {
+//       return desktop = 0;
+//     }
+//   }, 1);
+// }
+// let resizeSlick = () => {
+//   switch (tablet,desktop) {
+//     case 1: 
+//       console.log('tablet => '+$(window).width());
+//       $('.podcast_img_box').slick({
+//         dots: false,
+//         infinite: false,
+//         speed: 500,
+//         draggable: false,
+//         prevArrow: $('.pod_left_arrow_box'),
+//         nextArrow: $('.pod_right_arrow_box'),
+//         slidesToShow: 1,
+//         slidesToScroll: 1
+//       });
+//     case 0:
+//       console.log('desktop => '+$(window).width());
+//       $('.podcast_img_box').slick({
+//         dots: false,
+//         infinite: false,
+//         speed: 500,
+//         draggable: false,
+//         prevArrow: $('.pod_left_arrow_box'),
+//         nextArrow: $('.pod_right_arrow_box'),
+//         slidesToShow: 3,
+//         slidesToScroll: 3
+//       });
+//   }
+// }
+// resizeWidth();
+// resizeSlick();
+// console.log('resizeWidth => '+resizeWidth());
+$(window).on('resize', function() {
+    $('.carousel').slick('resize');
+  });
 /* 메인 이미지 슬라이더 */
 $('.main_bg_box').slick({
     dots: false,
     infinite: false,
+    draggable: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
     prevArrow: $('.left_arrow_box'),
-    nextArrow: $('.right_arrow_box'),
-    draggable: false,
-    responsive: [
-      {
-        breakpoint: 820,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
-          draggable: false,
-          prevArrow: $('.left_arrow_box'),
-          nextArrow: $('.right_arrow_box')
-        }
-      },
-      {
-        breakpoint: 520,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
-          prevArrow: $('.left_arrow_box'),
-          nextArrow: $('.right_arrow_box')
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          infinite: false,
-          dots: false,
-          prevArrow: $('.left_arrow_box'),
-          nextArrow: $('.right_arrow_box')
-        }
-      }
-      // You can unslick at a given breakpoint now by adding:
-      // settings: "unslick"
-      // instead of a settings object
-    ]
+    nextArrow: $('.right_arrow_box')
 })
 $('.right_arrow_box').click(function() {
     if(2 > $('.main_bg_box').slick('slickCurrentSlide') > 0) {
@@ -139,30 +148,41 @@ $('.left_arrow_box').click(function() {
         $('.left_arrow').css('display', 'none');
     }
 })
+
 /* podcast 이미지 슬라이더 */
 $('.podcast_img_box').slick({
   dots: false,
   infinite: false,
-  speed: 500,
   draggable: false,
+  speed: 500,
+  mobileFirst:true,
   prevArrow: $('.pod_left_arrow_box'),
   nextArrow: $('.pod_right_arrow_box'),
-  mobileFirst:true,
   responsive: [
     {
       breakpoint: 1024,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3
+        slidesToScroll: 3,
+        draggable: false,
       }
     },
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1
+        slidesToScroll: 1,
+        draggable: false,
       }
-    }
+    },
+    {
+        breakpoint: 300,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          draggable: true,
+        }
+      }
   ]
 });
 $('.pod_right_arrow_box').click(function() {
