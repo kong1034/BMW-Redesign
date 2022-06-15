@@ -1,6 +1,13 @@
 /* 공통 */
+html {
+    font-size: 16px;
+}
+html,body {
+    height: 100%;
+}
 *{
     margin: 0;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
@@ -131,15 +138,16 @@ input[type="text"]:focus {
     /* content */
     .main_bg_container {
         overflow: hidden;
-        width: 1900px;
+        width: 100%;
     }
     .main_bg_container > .main_bg_box {
         width: 100%;
-        height: 95vh;
+        height: 100%;
         padding: 0;
     }
     .main_bg_box > .main_bg_li {
         width: 100%;
+        height: 100%;
     }
     .main_bg_li > .main_bg {
         width: 100%;
@@ -152,8 +160,8 @@ input[type="text"]:focus {
     }
     .left_arrow_box {
         position: absolute;
-        top: 400px;
-        left: 70px;
+        top: 50%;
+        left: 2%;
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -166,8 +174,8 @@ input[type="text"]:focus {
     }
     .right_arrow_box {
         position: absolute;
-        top: 400px;
-        left: 1830px;
+        top: 50%;
+        left: 96%;
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -181,7 +189,7 @@ input[type="text"]:focus {
     /* second main bg */
     .second_img_container {
         border: 1px solid white;
-        width: 1900px;
+        width: 100%;
         height: 100vh;
         display: flex;
         justify-content: space-between;
@@ -213,21 +221,23 @@ input[type="text"]:focus {
     }
 
     /* podcast */
+    .m_bmw_podcast_container {
+        display: none;
+    }
     .bmw_podcast_container {
         background-color: #262626;
-        height: 60vh;
-        padding: 30px 150px 30px 150px;
+        height: 75%;
+        width: 100%;
         display: flex;
-        width: 1600px;
+        flex-direction: row;
     }
     .podcast_txt_container > .podcast_btn {
         border: 1px solid white;
-        width: 170px;
-        height: 5vh;
-        margin-top: 15px;
+        width: 100%;
+        height: 65px;
         text-align: center;
-        line-height: 45px;
-        font-size: 15px;
+        line-height: 55px;
+        font-size: 1.5rem;
         font-weight: bold;
         color: #fff;
     }
@@ -237,53 +247,55 @@ input[type="text"]:focus {
         cursor: pointer;
     }
     .bmw_podcast_container > .podcast_txt_container {
-        width: 350px;
-        height: 455px;
+        height: 100%;
     }
     .bmw_podcast_container > .podcast_img_container {
-        position: relative;
-        width: 100%;
-        height: 455px;
-        margin: 20px 0 0 150px;
+        width: 80%;
+        height: 85%;
+        margin: 0 0 0 50px;
+        display: flex;
+        flex-direction: row;
     }
     .podcast_img_container > .podcast_img_box{
         width: 100%;
-        height: 405px;
+        height: 100%;
         padding: 0;
-        position: absolute;
+        display: flex;
+        flex-direction: row;
         transition: left .5s ease-out;
         overflow: hidden;
     }
     .podcast_txt_container > .podcast_txt_top {
-        width: 350px;
-        height: 255px;
+        width: 100%;
+        height: 35%;
     }
     .podcast_txt_top > h1 {
-        font-size: 43px;
+        font-size: 2.5rem;
         text-align: start;
         color: #ffffff;
-        padding: 10px 0 0 10px;
+        padding: 20px 0 0 20px;
     }
     .podcast_txt_container > .podcast_txt_bottom {
-        width: 350px;
-        height: 200px;
+        width: 100%;
+        height: 50%;
+        padding-left: 20px;
+        margin: 10px 0 0 0;
     }
     .podcast_txt_bottom > bold {
         color: #fff;
-        font-size: 18px;
+        font-size: 1.42rem;
     }
     .podcast_img_box > .img_card {
-        width: 320px;
-        height: 80%;
-        position: relative;
-        display: flex;
-        justify-items: center;
+        width: 100%;
+        height: 100%;
+        padding-top: 100%;
     }
     .img_card > img {
-        width: 345px;
-        height: 80%;
-        margin: 0 20px 0 20px;
+        width: 82%;
+        height: 100%;
+        padding: 30px 0 0 0;
         transition: all .5s ease-out;
+        margin-left: 30px;
     }
     .img_card > img:hover {
         transform: scale(1.03);
@@ -291,10 +303,10 @@ input[type="text"]:focus {
     }
     .img_card > .img_info_box {
         position: absolute;
-        top: 65%;
-        width: 310px;
-        height: 40px;
-        padding: 35px 30px 35px 30px;
+        top: 80%;
+        width: 100%;
+        height: 120px;
+        padding: 35px 35px 35px 35px;
         color: #fff;
     }
     .img_card:nth-child(3) > .img_info_box {
@@ -307,13 +319,15 @@ input[type="text"]:focus {
         color: #000;
     }
     .img_info_box > img {
-        height: 20px;
-        height: 20px;;
+        height: 30px;
+    }
+    .img_info_box > h5,h4 {
+        font-size: 1.1rem;
     }
     .pod_left_arrow_box {
         position: absolute;
-        top: 225%;
-        left: 30%;
+        top: 245%;
+        left: 19.3%;
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -326,8 +340,8 @@ input[type="text"]:focus {
     }
     .pod_right_arrow_box {
         position: absolute;
-        top: 225%;
-        left: 95%;
+        top: 245%;
+        left: 97.5%;
         width: 30px;
         height: 30px;
         cursor: pointer;
@@ -510,8 +524,8 @@ input[type="text"]:focus {
 
     /* content */
     .main_bg_container {
-        width: 1180px;
-        height: 55vh;
+        width: 100%;
+        height: 100%;
         overflow: hidden;
     }
     .main_bg_container > .main_bg_box {
@@ -539,8 +553,8 @@ input[type="text"]:focus {
         position: absolute;
         top: 25%;
         left: 3%;
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
         display: none;
     }
@@ -552,22 +566,24 @@ input[type="text"]:focus {
     .right_arrow_box {
         position: absolute;
         top: 25%;
-        left: 135%;
-        width: 40px;
-        height: 40px;
+        left: 95%;
+        width: 30px;
+        height: 30px;
         cursor: pointer;
+        display: none;
     }
     .right_arrow_box > img {
         width: 100%;
         height: 100%;
         transform: rotateY(180deg);
+        display: none;
     }
 
     /* second main bg */
     .second_img_container {
         border: 1px solid #fff;
-        width: 1180px;
-        height: 60vh;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -597,21 +613,24 @@ input[type="text"]:focus {
     }
 
     /* podcast */
+    .m_bmw_podcast_container {
+        display: none;
+    }
     .bmw_podcast_container {
         background-color: #262626;
-        height: 900px;
+        height: 100%;
         padding: 20px 30px 35px 30px;
         display: flex;
-        width: 1116px;
+        width: 100%;
         border: 1px solid #fff;
     }
     .podcast_txt_container > .podcast_btn {
-        border: 1px solid white;
-        width: 200px;
+        border: 1px solid #fff;
+        width: 50%;
         height: 5vh;
-        margin-top: 250px;
+        margin-top: 10%;
         text-align: center;
-        line-height: 55px;
+        line-height: 45px;
         font-size: 25px;
         font-weight: bold;
         color: #fff;
@@ -622,63 +641,61 @@ input[type="text"]:focus {
         cursor: pointer;
     }
     .bmw_podcast_container > .podcast_txt_container {
-        width: 350px;
-        height: 455px;
+        width: 100%;
+        height: 100%;
     }
     .bmw_podcast_container > .podcast_img_container {
         position: relative;
-        width: 100%;
-        height: 80%;
-        margin: 0 0 0 80px;
+        width: 60%;
+        height: 90%;
+        margin: 0 0 0 7%;
+        border: 1px solid tomato;
     }
     .podcast_img_container > .podcast_img_box{
         width: 100%;
         height: 100%;
         padding: 0;
-        position: absolute;
         transition: left .5s ease-out;
         overflow: hidden;
+        border: 1px solid tomato;
     }
     .podcast_txt_container > .podcast_txt_top {
-        width: 350px;
-        height: 255px;
-        margin: 30px 0 50px 0;
+        width: 100%;
+        height: 36%;
     }
     .podcast_txt_top > h1 {
-        font-size: 50px;
+        font-size: 40px;
         text-align: start;
         color: #ffffff;
         padding: 10px 0 0 10px;
     }
     .podcast_txt_container > .podcast_txt_bottom {
-        width: 350px;
-        height: 200px;
+        width: 100%;
+        height: 25%;
+        margin-top: 5%;
     }
     .podcast_txt_bottom > bold {
         color: #fff;
-        font-size: 26.8px;
+        font-size: 25px;
     }
     .podcast_img_box > .img_card {
-        width: 650px;
+        width: 100%;
         height: 100%;
-        position: relative;
-        display: flex;
-        justify-items: center;
+        border: 1px solid tomato;
     }
     .img_card > img {
         width: 90%;
         height: 100%;
-        margin: 0 20px 0 20px;
+        margin: 0;
         transition: all .5s ease-out;
     }
     .img_card > .img_info_box {
         position: absolute;
-        top: 67%;
-        width: 50%;
-        height: 5%;
-        padding: 35px 30px 35px 30px;
+        top: 80%;
+        width: 7.5%;
+        height: 15%;
         color: #fff;
-        font-size: 35px;
+        font-size: 20px;
     }
     .img_card:nth-child(3) > .img_info_box {
         color: #000;
@@ -690,13 +707,13 @@ input[type="text"]:focus {
         color: #000;
     }
     .img_info_box > img {
-        height: 40px;
-        height: 40px;;
+        height: 20px;
+        height: 20px;;
     }
     .pod_left_arrow_box {
         position: absolute;
-        top: 145%;
-        left: 51%;
+        top: 150%;
+        left: 47%;
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -709,8 +726,8 @@ input[type="text"]:focus {
     }
     .pod_right_arrow_box {
         position: absolute;
-        top: 145%;
-        left: 135%;
+        top: 150%;
+        left: 93.5%;
         width: 40px;
         height: 40px;
         cursor: pointer;
@@ -723,7 +740,7 @@ input[type="text"]:focus {
 
     /* content txt */
     .main_txt_container {
-        width: 1180px;
+        width: 100%;
         height: 20vh;
         display: flex;
         justify-content: center;
@@ -877,10 +894,13 @@ input[type="text"]:focus {
     /* content */
     .main_bg_container {
         overflow: hidden;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #fff;
     }
     .main_bg_container > .main_bg_box {
         width: 100vw;
-        height: 26vh;
+        height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -888,7 +908,7 @@ input[type="text"]:focus {
         padding: 0;
     }
     .main_bg_box > .main_bg_li {
-        width: 100vw;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -900,7 +920,7 @@ input[type="text"]:focus {
     }
     .left_arrow_box {
         position: absolute;
-        top: 10%;
+        top: 22%;
         left: 2vw;
         width: 20px;
         height: 20px;
@@ -914,159 +934,105 @@ input[type="text"]:focus {
     }
     .right_arrow_box {
         position: absolute;
-        top: 10%;
+        top: 22%;
         left: 93vw;
         width: 20px;
         height: 20px;
         cursor: pointer;
+        display: none;
     }
     .right_arrow_box > img {
         width: 100%;
         height: 100%;
         transform: rotateY(180deg);
+        display: none;
     }
 
     /* second main bg */
     .second_img_container {
-        width: 100vw;
-        height: 120vh;
+        width: 100%;
+        height: 100%;
+        border: 1px solid #fff;
     }
     .second_img_container > .img_box {
-        width: 100vw;
-        height: 60vh;
+        width: 100%;
+        height: 100%;
     }
     .img_box > .second_img_one {
-        width: 100vw;
+        width: 100%;
         height: 100%;
     }
     .img_box > .second_img_two {
-        width: 100vw;
+        width: 100%;
         height: 100%;
     }
 
     /* podcast */
     .bmw_podcast_container {
+        display: none;
+    }
+    .m_bmw_podcast_container {
         background-color: #262626;
-        height: 160vh;
-        width: 100vw;
+        width: 100%;
+        height: 100%;
+    }
+    .m_bmw_podcast_container > .m_bmw_podcast_txt_container {
+        width: 100%;
+        height: 100%;
         border: 1px solid #fff;
     }
-    .podcast_txt_container > .podcast_btn {
-        border: 1px solid white;
+    .m_bmw_podcast_txt_container > .m_podcast_txt_top,.m_podcast_txt_bottom {
+        width: 100%;
+        height: 100%;
+        font-size: 2rem;
+    }
+    .m_podcast_txt_top > h1 {
+        color: #fff;
+    }
+    .m_podcast_txt_bottom > bold {
+        color: #fff;
+    }
+    .m_bmw_podcast_txt_container > .m_podcast_btn {
+        border: 1px solid #fff;
         width: 200px;
-        height: 45px;
-        margin: 40px 0 40px 95px;
+        height: 65px;
+        margin: 40px 0 40px 25%;
         text-align: center;
-        line-height: 40px;
+        line-height: 55px;
         font-size: 25px;
         font-weight: bold;
         color: #fff;
     }
-    .podcast_btn:hover {
+    .m_bmw_podcast_txt_container > .m_podcast_btn:hover {
         background-color: #fff;
         color: #262626;
         cursor: pointer;
     }
-    .bmw_podcast_container > .podcast_txt_container {
-        width: 100vw;
-        height: 100vh;
-    }
-    .bmw_podcast_container > .podcast_img_container {
-        position: relative;
+    .m_bmw_podcast_container > .m_podcast_img_container {
         width: 100%;
-        height: 34%;
-        margin: 0 0 0 20px;
+        height: 100%;
     }
-    .podcast_img_container > .podcast_img_box{
+    .m_podcast_img_container > .m_podcast_img_box {
         width: 100%;
         height: 100%;
         padding: 0;
-        position: absolute;
-        transition: left .5s ease-out;
-        overflow: hidden;
     }
-    .podcast_txt_container > .podcast_txt_top {
-        width: 350px;
-        height: 255px;
-        margin: 30px 0 50px 0;
-    }
-    .podcast_txt_top > h1 {
-        font-size: 50px;
-        text-align: start;
-        color: #ffffff;
-        padding: 10px 0 0 10px;
-    }
-    .podcast_txt_container > .podcast_txt_bottom {
-        width: 97vw;
-        height: 47vh;
-        padding: 0 10px 0 10px;
-    }
-    .podcast_txt_bottom > bold {
-        color: #fff;
-        font-size: 26.8px;
-    }
-    .podcast_img_box > .img_card {
-        width: 650px;
-        height: 100%;
-        position: relative;
-        display: flex;
-        justify-items: center;
-    }
-    .img_card > img {
-        width: 90%;
-        height: 100%;
-        transition: all .5s ease-out;
-    }
-    .img_card > .img_info_box {
-        position: absolute;
-        top: 80%;
-        width: 310px;
-        height: 80px;
-        padding: 0 20px 0 20px;
-        color: #fff;
-        font-size: 20px;
-    }
-    .img_card:nth-child(3) > .img_info_box {
-        color: #000;
-    }
-    .img_card:nth-child(7) > .img_info_box {
-        color: #000;
-    }
-    .img_card:nth-child(10) > .img_info_box {
-        color: #000;
-    }
-    .img_info_box > img {
-        height: 30px;
-        height: 30px;;
-    }
-    .pod_left_arrow_box {
-        position: absolute;
-        top: 145%;
-        left: 51%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        display: none;
-    }
-    .pod_left_arrow_box > img {
+    .m_podcast_img_box > .m_img_card, img {
         width: 100%;
         height: 100%;
-        display: none;
     }
-    .pod_right_arrow_box {
+    .m_img_card > .m_img_info_box {
         position: absolute;
-        top: 145%;
-        left: 135%;
-        width: 40px;
-        height: 40px;
-        cursor: pointer;
-        display: none;
-    }
-    .pod_right_arrow_box > img {
         width: 100%;
         height: 100%;
-        transform: rotateY(180deg);
-        display: none;
+        color: #fff;
+        top: 70%;
+        font-size: 1.3rem;
+        padding: 20px;
+    }
+    .m_img_info_box > img {
+        height: 40px;
+        width: 40px;
     }
 
     /* content txt */

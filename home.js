@@ -120,10 +120,31 @@ $('.main_bg_box').slick({
     infinite: false,
     draggable: false,
     speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
     prevArrow: $('.left_arrow_box'),
-    nextArrow: $('.right_arrow_box')
+    nextArrow: $('.right_arrow_box'),
+    responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        },
+        {
+            breakpoint: 300,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+      ]
 })
 $('.right_arrow_box').click(function() {
     if(2 > $('.main_bg_box').slick('slickCurrentSlide') > 0) {
@@ -155,6 +176,8 @@ $('.podcast_img_box').slick({
   infinite: false,
   draggable: false,
   speed: 500,
+  slidesToShow: 3,
+  slidesToScroll: 3,
   mobileFirst:true,
   prevArrow: $('.pod_left_arrow_box'),
   nextArrow: $('.pod_right_arrow_box'),
@@ -164,7 +187,7 @@ $('.podcast_img_box').slick({
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
-        draggable: false,
+        draggable: false
       }
     },
     {
@@ -172,7 +195,7 @@ $('.podcast_img_box').slick({
       settings: {
         slidesToShow: 1,
         slidesToScroll: 1,
-        draggable: false,
+        draggable: false
       }
     },
     {
@@ -180,7 +203,7 @@ $('.podcast_img_box').slick({
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          draggable: true,
+          draggable: true
         }
       }
   ]
@@ -207,5 +230,15 @@ $('.pod_left_arrow_box').click(function() {
         $('.pod_left_arrow_box').css('display', 'none');
         $('.pod_left_arrow').css('display', 'none');
     }
+})
+
+/* 모바일 podcast 이미지 슬라이더 */
+$('.m_podcast_img_box').slick({
+  dots: false,
+  infinite: false,
+  speed: 500,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrow: false
 })
  
