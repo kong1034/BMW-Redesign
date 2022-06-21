@@ -28,6 +28,23 @@ let mobile = null;
 let tablet = null;
 let desktop = null;
 
+addEventListener("fetch", event => { 
+  event.respondWith(async function() {
+    // Respond from the cache if we can
+    const cachedResponse = await caches.match(event.request);
+    if (cachedResponse) return cachedResponse; 
+    // Else, use the preloaded response, if it's there 
+    const response = await event.preloadResponse;
+    if (response) return response;
+    // Else try the network. 
+    return fetch(event.request);
+  }());
+});
+
+document.cookie = "safeCookie1=foo; SameSite=Lax"; 
+document.cookie = "safeCookie2=foo";  
+document.cookie = "crossCookie=bar; SameSite=None; Secure";
+
 /* nav 메뉴 */
 header_li_a.forEach(element => {
     element.addEventListener('mouseover', () => {
@@ -116,12 +133,11 @@ $(window).on('resize', function() {
   });
 /* 메인 이미지 슬라이더 */
 $('.main_bg_box').slick({
-    dots: false,
-    infinite: false,
-    draggable: false,
-    speed: 500,
-    prevArrow: $('.left_arrow_box'),
-    nextArrow: $('.right_arrow_box'),
+    infinite: true,
+    autoplay:true,
+    autoplayspeed:3000,
+    draggable: true,
+    speed: 2000,
     responsive: [
         {
           breakpoint: 1024,
@@ -146,56 +162,30 @@ $('.main_bg_box').slick({
           }
       ]
 })
-$('.right_arrow_box').click(function() {
-    if(2 > $('.main_bg_box').slick('slickCurrentSlide') > 0) {
-        $('.left_arrow_box').css('display', 'block');
-        $('.left_arrow').css('display', 'block');
-    } else if($('.main_bg_box').slick('slickCurrentSlide') == 2) {
-        $('.right_arrow_box').css('display', 'none');
-        $('.right_arrow').css('display', 'none');
-    } else {
-        $('.left_arrow_box').css('display', 'none');
-        $('.left_arrow').css('display', 'none');
-    }
-})
-$('.left_arrow_box').click(function() {
-    if($('.main_bg_box').slick('slickCurrentSlide')<2 && $('.main_bg_box').slick('slickCurrentSlide') != 0) {
-        console.log('why?')
-        $('.right_arrow_box').css('display', 'block');
-        $('.right_arrow').css('display', 'block');
-    } else if($('.main_bg_box').slick('slickCurrentSlide') == 0) {
-        console.log('check left slide position zero???')
-        $('.left_arrow_box').css('display', 'none');
-        $('.left_arrow').css('display', 'none');
-    }
-})
 
 /* podcast 이미지 슬라이더 */
 $('.podcast_img_box').slick({
-  dots: false,
-  infinite: false,
-  draggable: false,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 3,
+  infinite: true,
+  draggable: true,
+  autoplay: true,
+  autoplayspeed:3000,
+  speed: 2000,
+  slidesToShow: 2,
+  slidesToScroll: 2,
   mobileFirst:true,
-  prevArrow: $('.pod_left_arrow_box'),
-  nextArrow: $('.pod_right_arrow_box'),
   responsive: [
     {
-      breakpoint: 1024,
+      breakpoint: 1023,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
-        draggable: false
+        slidesToShow: 2,
+        slidesToScroll: 2
       }
     },
     {
       breakpoint: 768,
       settings: {
         slidesToShow: 1,
-        slidesToScroll: 1,
-        draggable: false
+        slidesToScroll: 1
       }
     },
     {
@@ -203,42 +193,19 @@ $('.podcast_img_box').slick({
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          draggable: true
         }
       }
   ]
 });
-$('.pod_right_arrow_box').click(function() {
-    if(9 > $('.podcast_img_box').slick('slickCurrentSlide') > 0) {
-        $('.pod_left_arrow_box').css('display', 'block');
-        $('.pod_left_arrow').css('display', 'block');
-    } else if($('.podcast_img_box').slick('slickCurrentSlide') == 9) {
-        $('.pod_right_arrow_box').css('display', 'none');
-        $('.pod_right_arrow').css('display', 'none');
-    } else {
-        $('.pod_left_arrow_box').css('display', 'none');
-        $('.pod_left_arrow').css('display', 'none');
-    }
-})
-$('.pod_left_arrow_box').click(function() {
-    if($('.podcast_img_box').slick('slickCurrentSlide')<9 && $('.podcast_img_box').slick('slickCurrentSlide') != 0) {
-        console.log('why?')
-        $('.pod_right_arrow_box').css('display', 'block');
-        $('.pod_right_arrow').css('display', 'block');
-    } else if($('.podcast_img_box').slick('slickCurrentSlide') == 0) {
-        console.log('check left slide position zero???')
-        $('.pod_left_arrow_box').css('display', 'none');
-        $('.pod_left_arrow').css('display', 'none');
-    }
-})
 
 /* 모바일 podcast 이미지 슬라이더 */
 $('.m_podcast_img_box').slick({
-  dots: false,
-  infinite: false,
-  speed: 500,
+  infinite: true,
+  draggable: true,
+  autoplay: true,
+  autoplayspeed:3000,
+  speed: 2000,
   slidesToShow: 1,
-  slidesToScroll: 1,
-  arrow: false
+  slidesToScroll: 1
 })
  
