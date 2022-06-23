@@ -1434,25 +1434,21 @@ input[type="text"]:focus {
         width: 55vw;
         height: 40%;
         margin: 5vw 0 0 3vw;
-        border: 1px solid #fff;
     }
     .bmw_footer_link_container > .bmw_footer_link_box:nth-child(2) {
         width: 55vw;
         height: 35%;
         margin: 5vw 0 0 3vw;
-        border: 1px solid #fff;
     }
     .bmw_footer_link_container > .bmw_footer_link_box:nth-child(3) {
         width: 55vw;
         height: 20%;
         margin: 5vw 0 0 3vw;
-        border: 1px solid #fff;
     }
     .bmw_footer_link_container > .bmw_footer_link_box:nth-child(4) {
         width: 55vw;
         height: 20%;
         margin: 5vw 0 0 3vw;
-        border: 1px solid #fff;
     }
     .bmw_footer_link_box > .bmw_footer_link_title_box {
         border-bottom: 1px solid #8e8e8e;
@@ -1473,25 +1469,21 @@ input[type="text"]:focus {
         width: 50vw;
         height: 83%;
         margin-left: 3vw;
-        border: 1px solid tomato;
     }
     .bmw_footer_link_box:nth-child(2) > .bmw_footer_link_nav {
         width: 50vw;
         height: 80%;
         margin-left: 3vw;
-        border: 1px solid tomato;
     }
     .bmw_footer_link_box:nth-child(3) > .bmw_footer_link_nav {
         width: 50vw;
         height: 70%;
         margin-left: 3vw;
-        border: 1px solid tomato;
     }
     .bmw_footer_link_box:nth-child(4) > .bmw_footer_link_nav {
         width: 50vw;
         height: 65%;
         margin-left: 3vw;
-        border: 1px solid tomato;
     }
     .bmw_footer_link_nav > .bmw_footer_link_ul {
         width: 100%;
