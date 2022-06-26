@@ -32,6 +32,15 @@ input[type="text"]:focus {
     caret-color: #ffffff;
     color: #ffffff;
 }
+button {
+    background: inherit;
+    border:none;
+    box-shadow:none;
+    border-radius:0;
+    padding:0;
+    overflow:visible;
+    cursor:pointer
+}
 @keyframes img_scale {
     0% {
         transform: scale(1);
@@ -90,7 +99,12 @@ input[type="text"]:focus {
         width: 706px;
         height: 30px;
     }
-    .search_box > .search_input {
+    .search_box > form {
+        display: none;
+        width: 706px;
+        height: 30px;
+    }
+    .search_box > form > .search_input {
         width: 99%;
     }
     .search_icon_box {
@@ -101,16 +115,21 @@ input[type="text"]:focus {
         align-items: center;
         margin: 0 0 0 20px;
     }
-    .search_icon_box > .search_icon {
-        width: 40px;
-        height: 40px;
+    .search_icon_box > button { 
+        width: 50px;
+        height: 50px;
+    }
+    button > .search_icon {
+        width: 50px;
+        height: 50px;
         cursor: pointer;
     }
-    .search_icon_box > .cancel_icon {
+    button > .cancel_icon {
         display: none;
         width: 30px;
         height: 30px;
         cursor: pointer;
+        margin-left: 15px;
     }
     .divide_line {
         border: 0.5px solid #ffffff;
@@ -150,12 +169,12 @@ input[type="text"]:focus {
         width: 100%;
         height: 100%;
     }
-    .main_bg_li > .main_bg {
+    .main_bg_li > a > .main_bg {
         width: 100%;
         height: 100%;
         transition: all 3s ease;
     }
-    .main_bg_li > .main_bg:hover {
+    .main_bg_li > a > .main_bg:hover {
         opacity: 0.7;
         cursor: pointer;
     }
@@ -178,25 +197,25 @@ input[type="text"]:focus {
         height: 60vw;
         border: 1px solid #fff;
     }
-    .img_box > .second_img_one {
+    .img_box > a > .second_img_one {
         width: 100%;
         height: 60vw;
         background-size: contain;
         transition: all 2s ease;
         border: 1px solid #fff;
     }
-    .img_box > .second_img_one:hover {
+    .img_box > a > .second_img_one:hover {
         opacity: 0.6;
         cursor: pointer;
     }
-    .img_box > .second_img_two {
+    .img_box > a > .second_img_two {
         width: 100%;
         height: 60vw;
         background-size: contain;
         transition: all 3s ease;
         border: 1px solid #fff;
     }
-    .img_box > .second_img_two:hover {
+    .img_box > a > .second_img_two:hover {
         opacity: 0.6;
         cursor: pointer;
     }
@@ -337,16 +356,17 @@ input[type="text"]:focus {
         height: 39vw;
         padding-top: 100%;
     }
-    .img_card > picture > img {
+    .img_card {
         width: 90%;
         height: 39vw;
         padding: 1vw 0 0 0;
-        transition: all .5s ease-out;
         margin-left: 0vw;
     }
-    .img_card > img:hover {
+    picture > img:hover {
+        transition: all .5s ease-out;
         transform: scale(1.03);
         opacity: 0.8;
+        cursor: pointer;
     }
     .img_card > .img_info_box {
         position: absolute;
@@ -402,11 +422,11 @@ input[type="text"]:focus {
         height: 30px;
         overflow:hidden;
     }
-    .main_txt_3_img_box > .right_arrow_txt {
+    .main_txt_3_a > .right_arrow_txt {
         width: 30px;
         height: 30px;
     }
-    .main_txt_3_img_box > .right_arrow_txt:hover {
+    .main_txt_3_a > .right_arrow_txt:hover {
         cursor: pointer;
     }
 
@@ -432,12 +452,17 @@ input[type="text"]:focus {
     .multiple_dis_container > .multiple_dis_two_box {
         width: 100%;
         height: 40vw;
-        border: 1px solid tomato;
         display: flex;
         flex-direction: row;
     }
-    .multiple_dis_two_box > img {
-        width: 50%;
+    .multiple_dis_two_box > a {
+        width: 100%;
+        height: 40vw;
+        display: flex;
+        flex-direction: row;
+    }
+    .multiple_dis_two_box > a > img {
+        width: 100%;
         height: 40vw;
         border: 2px solid #fff;
     }
@@ -459,12 +484,16 @@ input[type="text"]:focus {
         height: 20vw;
         border: 1px solid #fff;
     }
+    .multiple_dis_2 > a {
+        width: 39.95vw;
+        height: 20vw;
+    }
     .multiple_dis_2 > iframe {
         width: 39.95vw;
         height: 20vw;
         border: 1px solid #fff;
     }
-    .multiple_dis_2 > img {
+    .multiple_dis_2 > a > img {
         width: 39.95vw;
         height: 19.95vw;
         border: 2px solid #fff;
@@ -475,7 +504,12 @@ input[type="text"]:focus {
         height: 40vw;
         display: block;
     }
-    .multiple_dis_2_two_box > img {
+    .multiple_dis_2_two_box > a {
+        width: 60vw;
+        height: 40vw;
+        display: block;
+    }
+    .multiple_dis_2_two_box > a > img {
         width: 59vw;
         height: 40vw;
         border: 2px solid #fff;
@@ -510,7 +544,7 @@ input[type="text"]:focus {
     .bmw_footer_container > .bmw_footer_link_container {
         width: 60vw;
         height: 80%;
-        margin: 0 auto;
+        margin: 5vw auto;
         display: flex;
         justify-content: space-between;
     }
@@ -695,7 +729,7 @@ input[type="text"]:focus {
         justify-content: center;
         flex-direction: row;
     }
-    .main_bg_li > img {
+    .main_bg_li > a > img {
         width: 100%;
         height: 50vh;
     }
@@ -717,25 +751,17 @@ input[type="text"]:focus {
         height: 70vw;
         border: 1px solid #fff;
     }
-    .img_box > .second_img_one {
+    .img_box > a > .second_img_one {
         width: 100.5%;
         height: 70vw;
         transition: all 2s ease;
         border: 2px solid #fff;
     }
-    .img_box > .second_img_one:hover {
-        opacity: 0.6;
-        cursor: pointer;
-    }
-    .img_box > .second_img_two {
+    .img_box > a > .second_img_two {
         width: 100.5%;
         height: 70vw;
         transition: all 3s ease;
         border: 2px solid #fff;
-    }
-    .img_box > .second_img_two:hover {
-        opacity: 0.6;
-        cursor: pointer;
     }
     .second_img_container > .second_img_one_info_box {
         position: absolute;
@@ -762,11 +788,6 @@ input[type="text"]:focus {
         margin-top: 3vw;
         background-color: transparent;
     }
-    .second_img_one_info_box > .second_img_info_btn:hover {
-        color: #000;
-        background-color: #fff;
-        cursor: pointer;
-    }
     .second_img_container > .second_img_two_info_box {
         position: absolute;
         width: 40vw;
@@ -792,12 +813,6 @@ input[type="text"]:focus {
         line-height: 2.5vw;
         margin-top: 3vw;
         background-color: transparent;
-    }
-    .second_img_two_info_box > .second_img_info_btn:hover {
-        color: #000;
-        background-color: #fff;
-        cursor: pointer;
-        border: 1px solid #fff;
     }
 
     /* podcast */
@@ -868,7 +883,7 @@ input[type="text"]:focus {
         width: 100%;
         height: 56vw;
     }
-    .img_card > img {
+    .img_card > a > picture > img {
         width: 53vw;
         height: 56vw;
         margin: 0;
@@ -923,12 +938,9 @@ input[type="text"]:focus {
         height: 4vw;
         overflow:hidden;
     }
-    .main_txt_3_img_box > .right_arrow_txt {
+    .main_txt_3_a > .right_arrow_txt {
         width: 100%;
         height: 100%;
-    }
-    .main_txt_3_img_box > .right_arrow_txt:hover {
-        cursor: pointer;
     }
 
     /* multiple_dis_container */
@@ -957,8 +969,15 @@ input[type="text"]:focus {
         display: flex;
         flex-direction: row;
     }
-    .multiple_dis_two_box > img {
-        width: 50%;
+    .multiple_dis_two_box > a {
+        width: 100%;
+        height: 40vw;
+        border: 1px solid #fff;
+        display: flex;
+        flex-direction: row;
+    }
+    .multiple_dis_two_box > a > img {
+        width: 100%;
         height: 40vw;
         border: 2px solid #fff;
     }
@@ -979,12 +998,16 @@ input[type="text"]:focus {
         width: 37.7vw;
         height: 20vw;
     }
+    .multiple_dis_2 > a {
+        width: 37.7vw;
+        height: 20vw;
+    }
     .multiple_dis_2 > iframe {
         width: 37.7vw;
         height: 20vw;
         border: 2px solid #fff;
     }
-    .multiple_dis_2 > img {
+    .multiple_dis_2 > a > img {
         width: 37.7vw;
         height: 20vw;
         border: 2px solid #fff;
@@ -995,7 +1018,12 @@ input[type="text"]:focus {
         height: 40vw;
         display: block;
     }
-    .multiple_dis_2_two_box > img {
+    .multiple_dis_2_two_box > a {
+        width: 60vw;
+        height: 40vw;
+        display: block;
+    }
+    .multiple_dis_2_two_box > a > img {
         width: 60.1vw;
         height: 40vw;
         border: 2px solid #fff;
@@ -1030,6 +1058,7 @@ input[type="text"]:focus {
     .bmw_footer_container > .bmw_footer_link_container {
         width: 97.8vw;
         height: 80%;
+        margin-top: 5vw;
         display: flex;
         justify-content: space-between;
     }
@@ -1200,7 +1229,7 @@ input[type="text"]:focus {
         justify-content: center;
         flex-direction: row;
     }
-    .main_bg_li > img {
+    .main_bg_li > a > img {
         width: 96vw;
         height: 40vh;
     }
@@ -1216,11 +1245,11 @@ input[type="text"]:focus {
         width: 100%;
         height: 100%;
     }
-    .img_box > .second_img_one {
+    .img_box > a > .second_img_one {
         width: 100%;
         height: 50%;
     }
-    .img_box > .second_img_two {
+    .img_box > a > .second_img_two {
         width: 100%;
         height: 50%;
     }
@@ -1345,13 +1374,13 @@ input[type="text"]:focus {
         color: black;
         font-weight: 900;
     }
-    .main_txt_3_img_box {
+    .main_txt_3_a {
         width: 25px;
         height: 25px;
         overflow:hidden;
         margin-right: 5px;
     }
-    .main_txt_3_img_box > .right_arrow_txt {
+    .main_txt_3_a > .right_arrow_txt {
         width: 25px;
         height: 25px;
     }

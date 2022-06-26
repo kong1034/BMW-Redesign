@@ -4,6 +4,8 @@ let header_li_a = document.querySelectorAll('.header_li_a');
 let search_box = document.querySelector('.search_box');
 let search_icon = document.querySelector('.search_icon');
 let search_icon_box = document.querySelector('.search_icon_box');
+let search_btn = document.querySelector('.search_btn');
+let search_form = document.querySelector('.search_form');
 let search_input = document.querySelector('.search_input');
 let cancel_icon = document.querySelector('.cancel_icon');
 let left_arrow_box = document.querySelector('.left_arrow_box');
@@ -62,8 +64,12 @@ search_icon.addEventListener('click', () => {
         element.style.display = 'none';
     })
     search_icon.style.display = 'none';
-    search_box.style.display = 'block'; 
-    cancel_icon.style.display = 'block'; 
+    search_btn.style.display = 'none';
+    search_box.style.display = 'block';
+    search_form.style.display = 'block';
+    search_input.style.display = 'block';
+    cancel_icon.style.display = 'block';
+    cancel_icon.setAttribute('aria-hidden', false);
 })
 cancel_icon.addEventListener('click', () => {
     header_li.forEach(element => {
@@ -71,7 +77,11 @@ cancel_icon.addEventListener('click', () => {
     })
     tab_menu_li.style.display = 'none';
     search_icon.style.display = 'block';
+    search_btn.style.display = 'block';
+    search_form.style.display = 'none';
+    search_input.style.display = 'none';
     cancel_icon.style.display = 'none';
+    cancel_icon.setAttribute('aria-hidden', true);
     search_box.style.display = 'none';
     search_input.value = '';
 })

@@ -11,7 +11,8 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
-    <!-- header -->
+<!-- header -->
+<header>
     <nav class="header_box">
         <ul class="header_ul">
             <li class="header_li tab_menu_li"><a href="#" class="header_li_a tab_menu_a"><img class="tab_menu" src="/img/tab_menu.png"></a></li>
@@ -23,11 +24,13 @@
             <li class="header_li"><a href="#" class="header_li_a">Hynopolis 2</a></li>
             <li class="header_li"><a href="#" class="header_li_a">Models</a></li>
             <li class="search_box">
-                <input type="text" class="search_input">
+                <form action="#" method="get" role="search" class="search_form">
+                    <input type="text" class="search_input">
+                </form>
             </li>
             <li class="search_icon_box">
-                <img class="search_icon" src="/img/search_white.png" >
-                <img class="cancel_icon" src="/img/cancel_white.png">
+                <button class="search_btn"><img class="search_icon" src="/img/search_white.png" ></button>
+                <button><img aria-hidden="true" class="cancel_icon" src="/img/cancel_white.png"></button>
             </li>
             <li class="divide_line"></li>
             <li class="header_li_logo_box">
@@ -36,7 +39,7 @@
         </ul>
     </nav>
     <!-- mobile nav -->
-    <section class="m_header_overlay">
+    <section class="m_header_overlay" role="region">
         <nav class="m_header_box">
             <ul class="m_header_ul">
                 <li class="m_header_li"><img class="m_header_cancel_img" src="/img/cancel_white.png"></li>
@@ -50,18 +53,21 @@
             </ul>
         </nav>
     </section>
+</header>
+    
 
     <!-- main -->
+<main>
     <section class="main_bg_container" id="main_bg_container">
         <ul class="main_bg_box" id="main_bg_box">
             <li class="main_bg_li">
-                <img class="main_bg" src="/img/sgj-00-teaser-hd-modified.jpeg">
+                <a href="#"><img class="main_bg" src="/img/sgj-00-teaser-hd-modified.jpeg"></a>
             </li>
             <li class="main_bg_li">
-                <img class="main_bg" src="/img/sgj-10-media-hd-modified.jpeg">
+                <a href="#"><img class="main_bg" src="/img/sgj-10-media-hd-modified.jpeg"></a>
             </li>
             <li class="main_bg_li">
-                <img class="main_bg" src="/img/bmwi-14-media-hd-modified.jpeg">
+                <a href="#"><img class="main_bg" src="/img/bmwi-14-media-hd-modified.jpeg"></a>
             </li>
         </ul>
     </section>
@@ -69,10 +75,10 @@
     <!-- second main -->
     <section class="second_img_container">
         <div class="img_box">
-            <img src="/img/second_img_one_adobe_express.jpeg" class="second_img_one">
+            <a href="#"><img src="/img/second_img_one_adobe_express.jpeg" class="second_img_one"></a>
         </div>
         <div class="img_box">
-            <img src="/img/second_img_two_adobe_express.jpeg" class="second_img_two">
+            <a href="#"><img src="/img/second_img_two_adobe_express.jpeg" class="second_img_two"></a>
         </div>
         <div class="second_img_one_info_box">
             <strong>The iX1 Metaverse Exprerience</strong><br/>
@@ -113,15 +119,16 @@
         <div class="podcast_img_container">
             <ul class="podcast_img_box">
                 <li class="img_card">
-                    <picture>
-                        <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_1_adobe_express.jpeg">
-                        <img src="/img/podcast_img_1_adobe_express.jpeg"> 
-                    </picture>
-                    
+                    <a href="#">
+                        <picture>
+                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_1_adobe_express.jpeg">
+                            <img src="/img/podcast_img_1_adobe_express.jpeg"> 
+                        </picture>
+                    </a>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of circularity</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of circularity</h5>
                     </div>
                 </li>
                 <li class="img_card">
@@ -131,8 +138,8 @@
                     </picture>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of visual art</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of visual art</h5>
                     </div>
                 </li>
                 <li class="img_card">
@@ -153,8 +160,8 @@
                     </picture>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Automotive sensors</h5>
-                        <h4>The assistance systems</h4>
+                        <h4>Automotive sensors</h4>
+                        <h5>The assistance systems</h5>
                     </div>
                 </li>
                 <li class="img_card">
@@ -164,8 +171,8 @@
                     </picture>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of circularity</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of circularity</h5>
                     </div>
                 </li>
                 <li class="img_card">
@@ -175,8 +182,8 @@
                     </picture>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of visual art</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of visual art</h5>
                     </div>
                 </li>
                 <li class="img_card">
@@ -197,8 +204,8 @@
                     </picture>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Automotive sensors</h5>
-                        <h4>The assistance systems</h4>
+                        <h4>Automotive sensors</h4>
+                        <h5>The assistance systems</h5>
                     </div>
                 </li>
                 <li class="img_card">
@@ -208,8 +215,8 @@
                     </picture>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of circularity</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of circularity</h5>
                     </div>
                 </li>
                 <li class="img_card">
@@ -230,8 +237,8 @@
                     </picture>
                     <div class="img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of visual art</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of visual art</h5>
                     </div>
                 </li>
             </ul>
@@ -253,23 +260,23 @@
         <div class="m_podcast_img_container">
             <ul class="m_podcast_img_box">
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_1_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_1_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of circularity</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of circularity</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_2_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_2_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of visual art</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of visual art</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_3_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_3_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
                         <h4>Young leaders</h4>
@@ -277,31 +284,31 @@
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_4_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_4_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Automotive sensors</h5>
-                        <h4>The assistance systems</h4>
+                        <h4>Automotive sensors</h4>
+                        <h5>The assistance systems</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_1_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_1_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of circularity</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of circularity</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_2_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_2_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of visual art</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of visual art</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_3_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_3_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
                         <h4>Young leaders</h4>
@@ -309,23 +316,23 @@
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_4_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_4_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Automotive sensors</h5>
-                        <h4>The assistance systems</h4>
+                        <h4>Automotive sensors</h4>
+                        <h5>The assistance systems</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_1_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_1_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of circularity</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of circularity</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_3_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_3_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
                         <h4>Young leaders</h4>
@@ -333,11 +340,11 @@
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <img src="/img/m_podcast_img_2_adobe_express.jpeg">
+                    <a href="#"><img src="/img/m_podcast_img_2_adobe_express.jpeg"></a>
                     <div class="m_img_info_box">
                         <img src="/img/microphone.png">
-                        <h5>Audio column</h5>
-                        <h4>The future of visual art</h4>
+                        <h4>Audio column</h4>
+                        <h5>The future of visual art</h5>
                     </div>
                 </li>
             </ul>
@@ -356,7 +363,7 @@
             
             <div class="main_txt_3_container">
                 <div class="main_txt_3_img_box">
-                    <img class="right_arrow_txt" src="/img/left-arrow-black.png">
+                    <a href="#" class="main_txt_3_a"><img class="right_arrow_txt" src="/img/left-arrow-black.png"></a>
                 </div>
                 <div class="main_txt_3_box">
                     <a href="#" class="main_txt_3">
@@ -374,8 +381,8 @@
             <iframe src="https://www.youtube.com/embed/zpOtbwoeidc?start=2&mute=1&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
         <div class="multiple_dis_two_box">
-            <img src="/img/multiple_dis-1_adobe_express.jpeg">
-            <img src="/img/multiple_dis-2_adobe_express.jpeg">
+            <a href="#"><img src="/img/multiple_dis-1_adobe_express.jpeg"></a>
+            <a href="#"><img src="/img/multiple_dis-2_adobe_express.jpeg"></a>
         </div>
     </section>
     <section class="multiple_dis_container_2">
@@ -384,11 +391,11 @@
                 <iframe src="https://www.youtube.com/embed/Od5yC9qsu4Y?start=1&mute=1&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
             <div class="multiple_dis_2">
-                <img src="/img/multiple_dis_2-1_adobe_express.jpeg">
+                <a href="#"><img src="/img/multiple_dis_2-1_adobe_express.jpeg"></a>
             </div>
         </div>
         <div class="multiple_dis_2_two_box">
-            <img src="/img/multiple_dis_2-2_adobe_express.jpeg">
+            <a href="#"><img src="/img/multiple_dis_2-2_adobe_express.jpeg"></a>
         </div>
     </section>
     <section class="m_multiple_dis_container">
@@ -413,89 +420,91 @@
             <img src="/img/multiple_dis_2-2_adobe_express.jpeg">
         </div>
     </section>
+</main>
+    
 
-    <!--  footer -->
-    <footer class="bmw_footer_container">
-        <nav class="bmw_footer_lang_nav">
-            <ul class="bmw_footer_lang_nav_ul">
-                <li class="bmw_footer_lang_nav_li active"><a href="#">English</a></li>
-                <li class="bmw_footer_lang_nav_li"><a href="#">Korean</a></li>
-                <li class="bmw_footer_lang_nav_li"><a href="#">Espanyol</a></li>
-                <li class="bmw_footer_lang_nav_li"><a href="#">Japanese</a></li>
-                <li class="bmw_footer_lang_nav_li"><a href="#">Chinese</a></li>
-            </ul>
-        </nav>
-        <section class="bmw_footer_link_container">
-            <div class="bmw_footer_link_box">
-                <div class="bmw_footer_link_title_box">
-                    <h5>Quick Links</h5>
-                </div>
-                <nav class="bmw_footer_link_nav">
-                    <ul class="bmw_footer_link_ul">
-                        <li class="bmw_footer_link_li"><a href="#">Home</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW in your country</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Careers</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">EU Detergents Regulation</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">REACH Regulation</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Compatibility Check</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Software Update</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Accessories Update</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Autonomous Driving</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Service Page Charging Products</a></li>
-                    </ul>
-                </nav>
+<!--  footer -->
+<footer class="bmw_footer_container" role="contentinfo">
+    <nav class="bmw_footer_lang_nav">
+        <ul class="bmw_footer_lang_nav_ul">
+            <li class="bmw_footer_lang_nav_li active"><a href="#">English</a></li>
+            <li class="bmw_footer_lang_nav_li"><a href="#">Korean</a></li>
+            <li class="bmw_footer_lang_nav_li"><a href="#">Espanyol</a></li>
+            <li class="bmw_footer_lang_nav_li"><a href="#">Japanese</a></li>
+            <li class="bmw_footer_lang_nav_li"><a href="#">Chinese</a></li>
+        </ul>
+    </nav>
+    <section class="bmw_footer_link_container">
+        <div class="bmw_footer_link_box">
+            <div class="bmw_footer_link_title_box">
+                <h5>Quick Links</h5>
             </div>
+            <nav class="bmw_footer_link_nav">
+                <ul class="bmw_footer_link_ul">
+                    <li class="bmw_footer_link_li"><a href="#">Home</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW in your country</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Careers</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">EU Detergents Regulation</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">REACH Regulation</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Compatibility Check</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Software Update</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Accessories Update</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Autonomous Driving</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Service Page Charging Products</a></li>
+                </ul>
+            </nav>
+        </div>
 
-            <div class="bmw_footer_link_box">
-                <div class="bmw_footer_link_title_box">
-                    <h5>More BMW Websites</h5>
-                </div>
-                <nav class="bmw_footer_link_nav">
-                    <ul class="bmw_footer_link_ul">
-                        <li class="bmw_footer_link_li"><a href="#">BMW M</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Motorsport</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Golfsport</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Driving Exprerience</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Welt</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Group Classic</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Corporate/Direct Sales</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Group</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">BMW Group Culture</a></li>
-                    </ul>
-                </nav>
+        <div class="bmw_footer_link_box">
+            <div class="bmw_footer_link_title_box">
+                <h5>More BMW Websites</h5>
             </div>
+            <nav class="bmw_footer_link_nav">
+                <ul class="bmw_footer_link_ul">
+                    <li class="bmw_footer_link_li"><a href="#">BMW M</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Motorsport</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Golfsport</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Driving Exprerience</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Welt</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Group Classic</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Corporate/Direct Sales</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Group</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">BMW Group Culture</a></li>
+                </ul>
+            </nav>
+        </div>
 
-            <div class="bmw_footer_link_box">
-                <div class="bmw_footer_link_title_box">
-                    <h5>BMW.com</h5>
-                </div>
-                <nav class="bmw_footer_link_nav">
-                    <ul class="bmw_footer_link_ul">
-                        <li class="bmw_footer_link_li"><a href="#">About BMW.com</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Contact</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Cookies</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Imprint</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Legal Notice / Data protection</a></li>
-                    </ul>
-                </nav>
+        <div class="bmw_footer_link_box">
+            <div class="bmw_footer_link_title_box">
+                <h5>BMW.com</h5>
             </div>
+            <nav class="bmw_footer_link_nav">
+                <ul class="bmw_footer_link_ul">
+                    <li class="bmw_footer_link_li"><a href="#">About BMW.com</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Contact</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Cookies</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Imprint</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Legal Notice / Data protection</a></li>
+                </ul>
+            </nav>
+        </div>
 
-            <div class="bmw_footer_link_box">
-                <div class="bmw_footer_link_title_box">
-                    <h5>Visit us on</h5>
-                </div>
-                <nav class="bmw_footer_link_nav">
-                    <ul class="bmw_footer_link_ul">
-                        <li class="bmw_footer_link_li"><a href="#">Facebook</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Twitter</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Instagram</a></li>
-                        <li class="bmw_footer_link_li"><a href="#">Youtube</a></li>
-                    </ul>
-                </nav>
+        <div class="bmw_footer_link_box">
+            <div class="bmw_footer_link_title_box">
+                <h5>Visit us on</h5>
             </div>
-            
-        </section>
-    </footer>
+            <nav class="bmw_footer_link_nav">
+                <ul class="bmw_footer_link_ul">
+                    <li class="bmw_footer_link_li"><a href="#">Facebook</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Twitter</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Instagram</a></li>
+                    <li class="bmw_footer_link_li"><a href="#">Youtube</a></li>
+                </ul>
+            </nav>
+        </div>
+        
+    </section>
+</footer>
     
     <!-- Jquery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
