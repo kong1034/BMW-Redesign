@@ -1,6 +1,10 @@
+let header_box = document.querySelector('.header_box');
 let header_ul = document.querySelector('.header_ul');
+let header_search_ul = document.querySelector('.header_search_ul');
 let header_li = document.querySelectorAll('.header_li');
 let header_li_a = document.querySelectorAll('.header_li_a');
+let divide_line = document.querySelector('.divide_line');
+let header_li_logo_box = document.querySelector('.header_li_logo_box');
 let search_box = document.querySelector('.search_box');
 let search_icon = document.querySelector('.search_icon');
 let search_icon_box = document.querySelector('.search_icon_box');
@@ -59,42 +63,56 @@ header_li_a.forEach(element => {
     })
 });
 /* 검색 */
-search_icon.addEventListener('click', () => {
-    header_li.forEach(element => {
-        element.style.display = 'none';
-    })
-    search_icon.style.display = 'none';
-    search_btn.style.display = 'none';
-    search_box.style.display = 'block';
-    search_form.style.display = 'block';
-    search_input.style.display = 'block';
-    cancel_icon.style.display = 'block';
+search_icon_box.addEventListener('click', () => {
+    // header_li.forEach(element => {
+    //     element.style.display = 'none';
+    // })
+    // header_ul.style.display = 'none';
+    // search_icon.style.display = 'none';
+    // search_btn.style.display = 'none';
+    // divide_line.style.display = 'none';
+    // header_li_logo_box.style.display = 'none';
+    // header_search_ul.style.display = 'flex';
+    // header_search_ul.style.flexDirection = 'row';
+    // header_search_ul.style.justifyContent = 'center';
+    // header_search_ul.style.alignItems = 'center';
+    // search_box.style.display = 'block';
+    // cancel_icon.style.display = 'block';
+    header_ul.classList.remove('flex_center');
+    header_ul.classList.add('search');
+    header_search_ul.classList.add('flex_center');
+    header_search_ul.classList.remove('noshow');
+    search_input.setAttribute('aria-hidden', false);
     cancel_icon.setAttribute('aria-hidden', false);
 })
 cancel_icon.addEventListener('click', () => {
-    header_li.forEach(element => {
-        element.style.display = 'block';
-    })
-    tab_menu_li.style.display = 'none';
-    search_icon.style.display = 'block';
-    search_btn.style.display = 'block';
-    search_form.style.display = 'none';
-    search_input.style.display = 'none';
-    cancel_icon.style.display = 'none';
-    cancel_icon.setAttribute('aria-hidden', true);
-    search_box.style.display = 'none';
-    search_input.value = '';
+  header_ul.classList.remove('search');
+  header_ul.classList.add('flex_center');
+  header_search_ul.classList.remove('flex_center');
+    header_search_ul.classList.add('noshow');
+  search_input.setAttribute('aria-hidden', true);
+  cancel_icon.setAttribute('aria-hidden', true);
+    // header_li.forEach(element => {
+    //     element.style.display = 'block';
+    // })
+    // divide_line.style.display = 'block';
+    // header_li_logo_box.style.display = 'block';
+    // tab_menu_li.style.display = 'none';
+    // search_icon.style.display = 'block';
+    // search_btn.style.display = 'block';
+    // cancel_icon.style.display = 'none';
+    
+    // search_box.style.display = 'none';
+    // search_input.value = '';
 })
 /* 모바일 nav 메뉴 */
 tab_menu_a.addEventListener('click', () => {
-    m_header_overlay.classList.add('visible');
-    right_arrow_box.style.display = 'none';
-    left_arrow_box.style.display = 'none';
+  m_header_overlay.classList.remove('noshow');
+  m_header_overlay.classList.add('show');
 })
 m_header_cancel_img.addEventListener('click', () => {
-    m_header_overlay.classList.remove('visible');
-    right_arrow_box.style.display = 'block';
-    left_arrow_box.style.display = 'block';
+    m_header_overlay.classList.remove('show');
+    m_header_overlay.classList.add('noshow');
 })
 /* 크기 리사이징 및 슬릭 적용 */
 // let resizeWidth = () => {
@@ -148,6 +166,9 @@ $('.main_bg_box').slick({
     autoplayspeed:3000,
     draggable: true,
     speed: 2000,
+    arrows: false,
+    pauseOnFocus: true,
+    dots:true,
     responsive: [
         {
           breakpoint: 1024,
@@ -183,12 +204,16 @@ $('.podcast_img_box').slick({
   slidesToShow: 2,
   slidesToScroll: 2,
   mobileFirst:true,
+  arrows:true,
+  pauseOnFocus: true,
+  pauseOnHover: true,
   responsive: [
     {
       breakpoint: 1023,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2
+        slidesToScroll: 2,
+        pauseOnHover: true
       }
     },
     {

@@ -14,6 +14,9 @@ a {
     outline-style: none;
     color: #fff;
 }
+a:focus {
+    outline: 1px solid #0066B1;
+}
 li {
     list-style: none;
 }
@@ -41,6 +44,21 @@ button {
     overflow:visible;
     cursor:pointer
 }
+.slick-arrow {
+    position: absolute;
+}
+.flex_center {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.show {
+    display: block;
+}
+.noshow {
+    display: none;
+}
 @keyframes img_scale {
     0% {
         transform: scale(1);
@@ -58,20 +76,22 @@ button {
     .header_box {
         width: 100vw;
         height: 97px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        margin: 0 auto;
         position: absolute;
         z-index: 1;
     }
     .header_box > .header_ul {
         width: 100vw;
         height: 78px;
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        padding: 0;
+    }
+    .search {
+        display: none;
+    }
+    
+    .header_box > .header_search_ul {
+        width: 100vw;
+        height: 78px;
         padding: 0;
     }
     .header_ul > .header_li {
@@ -95,12 +115,10 @@ button {
         color: blue;
     }
     .search_box {
-        display: none;
         width: 706px;
         height: 30px;
     }
     .search_box > form {
-        display: none;
         width: 706px;
         height: 30px;
     }
@@ -115,21 +133,27 @@ button {
         align-items: center;
         margin: 0 0 0 20px;
     }
-    .search_icon_box > button { 
+    .search_icon_box > a { 
         width: 50px;
         height: 50px;
     }
-    button > .search_icon {
+    a > .search_icon {
         width: 50px;
         height: 50px;
         cursor: pointer;
     }
-    button > .cancel_icon {
-        display: none;
+    .cancel_icon {
+        width: 30px;
+        height: 30px;
+        margin-left: 15px;
+    }
+    .cancel_icon > a > img {
         width: 30px;
         height: 30px;
         cursor: pointer;
-        margin-left: 15px;
+    }
+    .cancel_icon > a {
+        display: block;
     }
     .divide_line {
         border: 0.5px solid #ffffff;
@@ -174,15 +198,11 @@ button {
         height: 100%;
         transition: all 3s ease;
     }
-    .main_bg_li > a > .main_bg:hover {
-        opacity: 0.7;
-        cursor: pointer;
-    }
     .main_bg_li > .main_bg_info_box {
         position: absolute;
         width: 30vw;
         height: 7vw;
-        top: 45vw;
+        top: 46vw;
         margin-left: 3vw;
     }
     .main_bg_info_box > h1, h2 {
@@ -213,25 +233,25 @@ button {
         height: 60vw;
         border: 1px solid #fff;
     }
-    .img_box > a > .second_img_one {
+    .img_box > .second_img_one {
         width: 100%;
         height: 60vw;
         background-size: contain;
         transition: all 2s ease;
         border: 1px solid #fff;
     }
-    .img_box > a > .second_img_one:hover {
+    .img_box > .second_img_one:hover {
         opacity: 0.6;
         cursor: pointer;
     }
-    .img_box > a > .second_img_two {
+    .img_box > .second_img_two {
         width: 100%;
         height: 60vw;
         background-size: contain;
         transition: all 3s ease;
         border: 1px solid #fff;
     }
-    .img_box > a > .second_img_two:hover {
+    .img_box > .second_img_two:hover {
         opacity: 0.6;
         cursor: pointer;
     }
@@ -309,6 +329,7 @@ button {
         display: flex;
         flex-direction: row;
         border: 2px solid #fff;
+        position: relative;
     }
     .podcast_txt_container > .podcast_btn {
         border: 1px solid #fff;
@@ -372,11 +393,20 @@ button {
         height: 39vw;
         padding-top: 100%;
     }
-    .img_card {
-        width: 90%;
-        height: 39vw;
-        padding: 1vw 0 0 0;
-        margin-left: 0vw;
+    .img_card > a {
+        width: 97%;
+        height: 100%;
+        padding-top: 1vw;
+    }
+    .img_card > a > picture {
+        width: 97%;
+        height: 100%;
+        padding-top: 1vw;
+    }
+    .img_card > a > picture > img{
+        width: 97%;
+        height: 100%;
+        padding-top: 1vw;
     }
     picture > img:hover {
         transition: all .5s ease-out;
@@ -489,9 +519,9 @@ button {
     .multiple_dis_two_img_one_box > .multiple_dis_two_one_info_box {
         position: absolute;
         width: 20vw;
-        height: 5vw;
+        height: 4vw;
         top: 240vw;
-        left: 0.5vw;
+        left: 1vw;
     }
     .multiple_dis_two_one_info_box > h1 {
         font-size: 1.8vw;
@@ -513,7 +543,7 @@ button {
         width: 30vw;
         height: 5vw;
         top: 240vw;
-        left: 50vw;
+        left: 50.5vw;
     }
     .multiple_dis_two_two_info_box > h1 {
         font-size: 1.8vw;
@@ -536,6 +566,7 @@ button {
         width: 39.95vw;
         height: 20vw;
         border: 1px solid #fff;
+        position: relative;
     }
     .multiple_dis_2 > a {
         width: 39.95vw;
@@ -551,11 +582,18 @@ button {
         height: 19.95vw;
         border: 2px solid #fff;
     }
+    .multiple_dis_2 > .multiple_dis_2_one_info_box {
+        position: absolute;
+        top: 60%;
+        left: 1vw;
+        color: #fff;
+    }
     .multiple_dis_container_2 > .multiple_dis_2_two_box {
         border: 1px solid #fff;
         width: 60vw;
         height: 40vw;
         display: block;
+        position: relative;
     }
     .multiple_dis_2_two_box > a {
         width: 60vw;
@@ -566,6 +604,12 @@ button {
         width: 59vw;
         height: 40vw;
         border: 2px solid #fff;
+    }
+    .multiple_dis_2_two_box > .multiple_dis_2_two_info_box {
+        position: absolute;
+        top: 80%;
+        left: 1vw;
+        color: #fff;
     }
 
     /* footer */
@@ -650,6 +694,12 @@ button {
         z-index: 1;
     }
     .header_box > .header_ul {
+        display: none;
+    }
+    .header_box > .header_search_ul {
+        display: none;
+    }
+    .header_box > .m_header_ul {
         width: 100vw;
         height: 78px;
         display: flex;
@@ -662,7 +712,7 @@ button {
     .header_ul > .header_li {
         display: none;
     }
-    .header_ul > .tab_menu_li {
+    .m_header_ul > .tab_menu_li {
         display: block;
         width: 30px;
         height: 30px;
@@ -679,24 +729,11 @@ button {
     }
     .search_box {
         display: none;
-        width: 662px;
-        height: 30px;
     }
     .search_icon_box {
-        width: 50px;
-        height: 50px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0 0 0 20px;
         display: none;
     }
     .header_li_logo_box {
-        width: 70px;
-        height: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         display: none;
     }
     /* 태블릿, 모바일 */
@@ -708,10 +745,6 @@ button {
         width: 0;
         height: 100%;
         opacity: 0;
-        visibility: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: 0.3s;
         z-index: 2;
     }
@@ -729,10 +762,9 @@ button {
     .m_header_li > a:hover {
         opacity: 1;
     }
-    .m_header_overlay.visible {
+    .m_header_overlay {
         width: 100%;
         opacity: 1;
-        visibility: visible;
     }
     .m_header_cancel_img {
         width: 30px;
@@ -761,13 +793,13 @@ button {
     /* content */
     .main_bg_container {
         width: 99.9%;
-        height: 50vh;
+        height: 50%;
         overflow: hidden;
         border: 2px solid #fff;
     }
     .main_bg_container > .main_bg_box {
         width: 99.9%;
-        height: 50vh;
+        height: 50%;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -777,7 +809,7 @@ button {
     }
     .main_bg_box > .main_bg_li {
         width: 100%;
-        height: 50vh;
+        height: 50%;
         display: flex;
         justify-content: center;
         flex-direction: row;
@@ -790,7 +822,7 @@ button {
         position: absolute;
         width: 30vw;
         height: 7vw;
-        top: 38vw;
+        top: 85%;
         margin-left: 3vw;
     }
     .main_bg_info_box > h1, h2 {
@@ -820,13 +852,13 @@ button {
         height: 100%;
         border: 1px solid #fff;
     }
-    .img_box > a > .second_img_one {
+    .img_box > .second_img_one {
         width: 100.5%;
         height: 100%;
         transition: all 2s ease;
         border: 2px solid #fff;
     }
-    .img_box > a > .second_img_two {
+    .img_box > .second_img_two {
         width: 100.5%;
         height: 100%;
         transition: all 3s ease;
@@ -836,7 +868,7 @@ button {
         position: absolute;
         width: 40vw;
         height: 13vw;
-        top: 100%;
+        top: 102%;
         margin-left: 1vw;
     }
     .second_img_one_info_box > strong {
@@ -861,7 +893,7 @@ button {
         position: absolute;
         width: 40vw;
         height: 13vw;
-        top: 100%;
+        top: 102%;
         left: 50vw;
         margin-left: 1vw;
     }
@@ -1019,47 +1051,48 @@ button {
     .multiple_dis_container {
         border: 1px solid #fff;
         width: 98vw;
-        height: 80vw;
+        height: 100vw;
     }
     .multiple_dis_container > .multiple_dis_one_box {
         width: 98vw;
-        height: 40vw;
+        height: 50vw;
         border: 1px solid #fff;
     }
     .multiple_dis_one_box > iframe {
         width: 100%;
-        height: 40vw;
+        height: 100%;
         border: 2px solid #fff;
     }
     .multiple_dis_container > .multiple_dis_two_box {
         width: 100.1%;
-        height: 40vw;
+        height: 50vw;
         border: 1px solid #fff;
         display: flex;
         flex-direction: row;
+        position: relative;
     }
     .multiple_dis_two_box > .multiple_dis_two_img_one_box, .multiple_dis_two_img_two_box {
         width: 50%;
-        height: 40vw;
+        height: 100%;
     }
     .multiple_dis_two_img_one_box > a {
         width: 100%;
-        height: 40vw;
+        height: 100%;
         border: 1px solid #fff;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_two_img_one_box > a > img {
         width: 100%;
-        height: 40vw;
+        height: 100%;
         border: 2px solid #fff;
     }
-    .multiple_dis_two_img_one_box > .multiple_dis_two_one_info_box {
-        position: absolute;
+    .multiple_dis_two_one_info_box {
         width: 20vw;
-        height: 5vw;
-        top: 260vw;
-        left: 1.5vw;
+        height: 7vw;
+        position: absolute;
+        top: 80%;
+        left: 1%;
     }
     .multiple_dis_two_one_info_box > h1 {
         font-size: 1.8vw;
@@ -1067,21 +1100,22 @@ button {
     }
     .multiple_dis_two_img_two_box > a {
         width: 100%;
-        height: 40vw;
+        height: 100%;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_two_img_two_box > a > img {
         width: 100%;
-        height: 40vw;
+        height: 100%;
         border: 1px solid #fff;
     }
-    .multiple_dis_two_img_two_box > .multiple_dis_two_two_info_box {
-        position: absolute;
+    .multiple_dis_two_two_info_box {
         width: 30vw;
-        height: 5vw;
-        top: 259vw;
-        left: 50vw;
+        height: 7vw;
+        position: absolute;
+        top: 80%;
+        left: 51%;
+        z-index: 1;
     }
     .multiple_dis_two_two_info_box > h1 {
         font-size: 1.8vw;
@@ -1099,6 +1133,7 @@ button {
         width: 37.7vw;
         height: 40vw;
         display: block;
+        position: relative;
     }
     .multiple_dis_2_one_box > .multiple_dis_2 {
         width: 37.7vw;
@@ -1118,11 +1153,18 @@ button {
         height: 20vw;
         border: 2px solid #fff;
     }
+    .multiple_dis_2_one_info_box {
+        position: absolute;
+        top: 75%;
+        left: 1%;
+        color: #fff;
+    }
     .multiple_dis_container_2 > .multiple_dis_2_two_box {
         border: 1px solid #fff;
         width: 60vw;
         height: 40vw;
         display: block;
+        position: relative;
     }
     .multiple_dis_2_two_box > a {
         width: 60vw;
@@ -1133,6 +1175,12 @@ button {
         width: 60.1vw;
         height: 40vw;
         border: 2px solid #fff;
+    }
+    .multiple_dis_2_two_box > .multiple_dis_2_two_info_box {
+        position: absolute;
+        top: 75%;
+        left: 1%;
+        color: #fff;
     }
 
     /* footer */
@@ -1212,20 +1260,17 @@ button {
         height: 50px;
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         position: absolute;
         z-index: 1;
     }
     .header_box > .header_ul {
-        width: 100vw;
-        height: 5vh;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-start;
-        align-items: center;
+        display: none;
+    }
+    .header_box > .m_header_ul {
         padding: 0;
-        margin: 0 0 0 20px;
+        margin: 5vw 0 0 5vw;
     }
     .header_ul > .header_li {
         display: none;
@@ -1275,15 +1320,11 @@ button {
         width: 0;
         height: 100%;
         opacity: 0;
-        visibility: hidden;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         transition: 0.3s;
         z-index: 2;
     }
     .m_header_li {
-        margin: 1rem 0;
+        margin: 30px 0;
         opacity: 1;
         display: flex;
         justify-content: center;
@@ -1296,10 +1337,9 @@ button {
     .m_header_li > a:hover {
         opacity: 1;
     }
-    .m_header_overlay.visible {
+    .m_header_overlay {
         width: 100%;
         opacity: 1;
-        visibility: visible;
     }
     .m_header_cancel_img {
         width: 30px;
@@ -1315,12 +1355,12 @@ button {
     /* content */
     .main_bg_container {
         overflow: hidden;
-        width: 96vw;
-        height: 40vh;
-        border: 1px solid #fff;
+        width: 96.7vw;
+        height: 40%;
+        border: 4px solid #fff;
     }
     .main_bg_container > .main_bg_box {
-        width: 96vw;
+        width: 96.4vw;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -1329,28 +1369,28 @@ button {
         padding: 0;
     }
     .main_bg_box > .main_bg_li {
-        width: 96vw;
+        width: 96.4vw;
         height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
     }
     .main_bg_li > a > img {
-        width: 96vw;
-        height: 40vh;
+        width: 96.4vw;
+        height: 40%;
     }
     .main_bg_li > .main_bg_info_box {
         position: absolute;
         width: 50vw;
-        height: 7vw;
-        top: 60vw;
+        height: 9vw;
+        top: 78%;
         margin-left: 3vw;
     }
     .main_bg_info_box > h1, h2 {
         color: #fff;
     }
     .main_bg_info_box > h1 {
-        font-size: 5vw;
+        font-size: 4vw;
     }
     .main_bg_info_box > h2 {
         font-size: 3vw;
@@ -1377,28 +1417,31 @@ button {
     }
     .m_second_img_container {
         width: 96vw;
-        height: 262vw;
+        height: 200%;
         display: block;
-        border: 1px solid #fff;
+        border: 4px solid #fff;
     }
     .m_second_img_container > .m_img_box {
         width: 96vw;
-        height: 262vw;
+        height: 200%;
         border: 1px solid #fff;
     }
     .m_img_box > .m_img_one_box {
         width: 96vw;
-        height: 131vw;
+        height: 100%;
+        position: relative;
     }
     .m_img_box > .m_img_two_box {
         width: 96vw;
-        height: 131vw;
+        height: 100%;
+        position: relative;
     }
     .m_img_one_box > .m_img_one_info_box {
         position: absolute;
-        top: 99%;
+        top: 83%;
         width: 60vw;
-        height: 12vw;
+        height: 18vw;
+        left: 3vw;
     }
     .m_img_one_info_box > h1 {
         font-size: 7vw;
@@ -1406,9 +1449,10 @@ button {
     }
     .m_img_two_box > .m_img_two_info_box {
         position: absolute;
-        top: 168%;
-        width: 80vw;
-        height: 12vw;
+        top: 83%;
+        width: 40vw;
+        height: 20vw;
+        left: 3vw;
     }
     .m_img_two_info_box > h1 {
         font-size: 7vw;
@@ -1422,6 +1466,7 @@ button {
         background-color: #262626;
         width: 96.5vw;
         height: 250vw;
+        border: 2px solid #fff;
     }
     .m_bmw_podcast_container > .m_bmw_podcast_txt_container {
         width: 100%;
@@ -1429,17 +1474,20 @@ button {
         border: 2px solid #fff;
     }
     .m_bmw_podcast_txt_container > .m_podcast_txt_top {
-        width: 100%;
+        width: 96%;
         height: 40vw;
+        margin-left: 3vw;
     }
     .m_bmw_podcast_txt_container > .m_podcast_txt_bottom {
-        width: 100%;
-        height: 50vw;
-        margin-top: 3vw;
+        width: 96%;
+        height: 52.5vw;
+        margin: 0 0 0 3vw;
     }
     .m_podcast_txt_top > h1 {
         color: #fff;
         font-size: 9.75vw;
+        width: 97%;
+        margin-left: 1vw;
     }
     .m_podcast_txt_bottom > bold {
         color: #fff;
@@ -1449,7 +1497,7 @@ button {
         border: 1px solid #fff;
         width: 90vw;
         height: 13vw;
-        margin: 5vw 0 5vw 3.5vw;
+        margin: 5vw 2.5vw 5vw 2.5vw;
         text-align: center;
         line-height: 12vw;
         font-size: 5vw;
@@ -1467,7 +1515,7 @@ button {
         padding: 0;
     }
     .m_podcast_img_box > .m_img_card, img {
-        width: 100%;
+        width: 99%;
         height: 130vw;
     }
     .m_img_card > .m_img_info_box {
@@ -1547,6 +1595,7 @@ button {
         border: 1px solid #fff;
         width: 96vw;
         height: 70vw;
+        position: relative;
     }
     .m_multiple_dis_box > iframe {
         width: 96vw;
@@ -1558,6 +1607,18 @@ button {
         height: 70vw;
         border: 2px solid #fff;
     }
+    .m_multiple_dis_box > .multiple_dis_one_info_box {
+        position: absolute;
+        left: 3vw;
+        top: 75%;
+        color: #fff;
+    }
+    .m_multiple_dis_box > .multiple_dis_two_info_box {
+        position: absolute;
+        left: 3vw;
+        top: 75%;
+        color: #fff;
+    }
     .m_multiple_dis_box_2 > iframe {
         width: 96vw;
         height: 70vw;
@@ -1568,6 +1629,19 @@ button {
         height: 70vw;
         border: 2px solid #fff;
     }
+    .m_multiple_dis_box_2 > .multiple_dis_two_one_info_box {
+        position: absolute;
+        left: 3vw;
+        top: 75%;
+        color: #fff;
+    }
+    .m_multiple_dis_box_2 > .multiple_dis_two_two_info_box {
+        position: absolute;
+        left: 3vw;
+        top: 75%;
+        color: #fff;
+    }
+
 
     /* footer */
     .bmw_footer_container {
