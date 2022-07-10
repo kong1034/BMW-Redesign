@@ -1355,7 +1355,7 @@ button {
     /* content */
     .main_bg_container {
         overflow: hidden;
-        width: 96.7vw;
+        width: 97.5vw;
         height: 40%;
         border: 4px solid #fff;
     }
@@ -1475,13 +1475,13 @@ button {
     }
     .m_bmw_podcast_txt_container > .m_podcast_txt_top {
         width: 96%;
-        height: 40vw;
+        height: 45vw;
         margin-left: 3vw;
     }
     .m_bmw_podcast_txt_container > .m_podcast_txt_bottom {
         width: 96%;
-        height: 52.5vw;
-        margin: 0 0 0 3vw;
+        height: 45%;
+        margin: 1.5vw 0 0 3vw;
     }
     .m_podcast_txt_top > h1 {
         color: #fff;
@@ -1491,7 +1491,7 @@ button {
     }
     .m_podcast_txt_bottom > bold {
         color: #fff;
-        font-size: 4.95vw;
+        font-size: 5.5vw;
     }
     .m_bmw_podcast_txt_container > .m_podcast_btn {
         border: 1px solid #fff;
@@ -1515,8 +1515,8 @@ button {
         padding: 0;
     }
     .m_podcast_img_box > .m_img_card, img {
-        width: 99%;
-        height: 130vw;
+        width: 100%;
+        height: 129vw;
     }
     .m_img_card > .m_img_info_box {
         position: absolute;
@@ -1540,6 +1540,7 @@ button {
         justify-content: center;
         align-items: center;
         border: 1px solid #fff;
+        margin-top: 5vw;
     }
     .main_txt_container > .main_txt_box {
         width: 80%;

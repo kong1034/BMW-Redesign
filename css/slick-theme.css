@@ -13,7 +13,7 @@
     position: absolute;
     top: 50%;
 
-    display: block;
+    display: none;
 
     width: 20px;
     height: 20px;
@@ -179,8 +179,8 @@
     content: '•';
     text-align: center;
 
-    opacity: .25;
-    color: #000;
+    opacity: .8;
+    color: #fff;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

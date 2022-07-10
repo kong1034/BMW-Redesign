@@ -241,6 +241,8 @@ $('.m_podcast_img_box').slick({
   autoplayspeed:3000,
   speed: 2000,
   slidesToShow: 1,
-  slidesToScroll: 1
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true
 })
  
