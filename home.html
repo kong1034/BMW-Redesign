@@ -6,48 +6,37 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, user-scalable=no, initial-scale=1.0">
     <title>BMW</title>
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" type="text/css" href="/css/slick.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/slick-theme.css"/>
+    <link rel="stylesheet" href="/home.css">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
 </head>
 <body>
-<!-- header -->
-<header>
-    <nav class="header_box" role="navigation">
-        <ul class="header_ul flex_center" >
-            
-            <li class="header_li" ><a href="#" class="header_li_a">Home</a></li>
-            <li class="header_li" ><a href="#" class="header_li_a" >Magazine</a></li>
-            <li class="header_li" ><a href="#" class="header_li_a" >Podcasts</a></li>
-            <li class="header_li" ><a href="#" class="header_li_a" >Events</a></li>
-            <li class="header_li" ><a href="#" class="header_li_a" >Esports</a></li>
-            <li class="header_li" ><a href="#" class="header_li_a" >Hynopolis 2</a></li>
-            <li class="header_li" ><a href="#" class="header_li_a" >Models</a></li>
-            
-            <li class="search_icon_box" >
-                <a href="#" role="button" class="search_btn" alt="search button"><img class="search_icon" src="/img/search_white.png" ></a>
+    <!-- header -->
+    <nav class="header_box">
+        <ul class="header_ul">
+            <li class="header_li tab_menu_li"><a href="#" class="header_li_a tab_menu_a"><img class="tab_menu" src="/img/tab_menu.png"></a></li>
+            <li class="header_li"><a href="#" class="header_li_a">Home</a></li>
+            <li class="header_li"><a href="#" class="header_li_a">Magazine</a></li>
+            <li class="header_li"><a href="#" class="header_li_a">Podcasts</a></li>
+            <li class="header_li"><a href="#" class="header_li_a">Events</a></li>
+            <li class="header_li"><a href="#" class="header_li_a">Esports</a></li>
+            <li class="header_li"><a href="#" class="header_li_a">Hynopolis 2</a></li>
+            <li class="header_li"><a href="#" class="header_li_a">Models</a></li>
+            <li class="search_box">
+                <input type="text" class="search_input">
+            </li>
+            <li class="search_icon_box">
+                <img class="search_icon" src="/img/search_white.png" >
+                <img class="cancel_icon" src="/img/cancel_white.png">
             </li>
             <li class="divide_line"></li>
-            <li class="header_li_logo_box" >
-                <a href="#"><img class="logo" src="/img/bmw_logo.png" alt="BMW logo"></a>
+            <li class="header_li_logo_box">
+                <a href="#"><img class="logo" src="/img/bmw_logo.png"></a>
             </li>
-        </ul>
-        <ul class="header_search_ul noshow" >
-            <li class="search_box show" >
-                <form action="#" method="get" role="search" class="search_form" aria-hidden="true" >
-                    <input type="text" class="search_input" alt="fill the search text">
-                </form>
-            </li>
-            <li class="cancel_icon show" >
-                <a href="#" role="button" alt="search cancel button"><img aria-hidden="true" class="cancel_img" src="/img/cancel_white.png" alt="search cancel button"></a>
-            </li>
-        </ul>
-        <ul class="m_header_ul">
-            <li class="header_li tab_menu_li"><a href="#" class="header_li_a tab_menu_a"><img class="tab_menu" src="/img/tab_menu.png"></a></li>
         </ul>
     </nav>
     <!-- mobile nav -->
-    <section class="m_header_overlay noshow" role="region">
+    <section class="m_header_overlay">
         <nav class="m_header_box">
             <ul class="m_header_ul">
                 <li class="m_header_li"><img class="m_header_cancel_img" src="/img/cancel_white.png"></li>
@@ -61,250 +50,150 @@
             </ul>
         </nav>
     </section>
-</header>
-    
 
     <!-- main -->
-<main>
-    <section class="main_bg_container" id="main_bg_container" >
-        <ul class="main_bg_box" id="main_bg_box" >
-            <li class="main_bg_li" >
-                <a href="#"><img class="main_bg" src="/img/sgj-00-teaser-hd-modified.jpeg" alt="BMW ix electronic car"></a>
-                <div class="main_bg_info_box">
-                    <h1 class="main_bg_info_title">
-                        Going green
-                    </h1>
-                    <h2 class="main_bg_info_content">
-                        BMW iX Electronic Model
-                    </h2>
-                </div>
+    <section class="main_bg_container" id="main_bg_container">
+        <ul class="main_bg_box" id="main_bg_box">
+            <li class="main_bg_li">
+                <img class="main_bg" src="/img/sgj-00-teaser-hd-modified.jpeg">
             </li>
             <li class="main_bg_li">
-                <a href="#"><img class="main_bg" src="/img/sgj-10-media-hd-modified.jpeg" alt="BMW ix eletronic car" ></a>
-                <div class="main_bg_info_box">
-                    <h1 class="main_bg_info_title">
-                        Think Enviorment
-                    </h1>
-                    <h2 class="main_bg_info_content">
-                        BMW iX Electronic Model
-                    </h2>
-                </div>
+                <img class="main_bg" src="/img/sgj-10-media-hd-modified.jpeg">
             </li>
             <li class="main_bg_li">
-                <a href="#"><img class="main_bg" src="/img/bmwi-14-media-hd-modified.jpeg" alt="BMW Hydrogen Fuel car" ></a>
-                <div class="main_bg_info_box">
-                    <h1 class="main_bg_info_title">
-                        Step by Step
-                    </h1>
-                    <h2 class="main_bg_info_content">
-                        BMW Hydrogen Fuel Car
-                    </h2>
-                </div>
+                <img class="main_bg" src="/img/bmwi-14-media-hd-modified.jpeg">
             </li>
         </ul>
     </section>
+    <span class="left_arrow_box">
+        <img class="left_arrow" src="/img/left-arrow.png">
+    </span>
+    <span class="right_arrow_box">
+        <img class="right_arrow" src="/img/left-arrow.png">
+    </span>
 
     <!-- second main -->
     <section class="second_img_container">
         <div class="img_box">
-            <img src="/img/second_img_one_adobe_express.jpeg" class="second_img_one" alt="iX1 Metaverse Exprerience">
-        </div>
-        <div class="second_img_one_info_box">
-            <strong>The iX1 Metaverse Exprerience</strong><br/>
-            <bold>Enter a world full of dreams</bold><br/>
-            <button class="second_img_info_btn">
-                Read more
-            </button>
+            <img src="/img/second_img_one.jpeg" class="second_img_one">
         </div>
         <div class="img_box">
-            <img src="/img/second_img_two_adobe_express.jpeg" class="second_img_two" alt="Looks meet feel - fabrics and material" tabindex="26">
+            <img src="/img/second_img_two.jpeg" class="second_img_two"></video>
         </div>
-        <div class="second_img_two_info_box">
-            <strong>Ride with pride</strong><br/>
-            <bold >Celebrating all colors of Freude</bold><br/>
-            <button class="second_img_info_btn" >
-                Read more
-            </button>
-        </div>
-    </section>
-    <section class="m_second_img_container">
-        <div class="m_img_box">
-            <div class="m_img_one_box">
-                <img src="/img/m_second_img_one_adobe_express.jpeg" class="m_second_img_one" alt="iX1 Metaverse Exprerience">
-                <div class="m_img_one_info_box">
-                    <h1>BMW Metaverse Exprerience</h1>
-                </div>
-            </div>
-            <div class="m_img_two_box">
-                <img src="/img/m_second_img_two_adobe_express.jpeg" class="m_second_img_two" alt="Looks meet feel - fabrics and material">
-                <div class="m_img_two_info_box">
-                    <h1>Fabrics and material</h1>
-                </div>
-            </div>
-        </div>
-        
     </section>
 
     <!-- posdcast -->
     <section class="bmw_podcast_container">
         <div class="podcast_txt_container">
-            <div class="podcast_txt_top" >
+            <div class="podcast_txt_top">
                 <h1>THE BMW PODCAST: CHANGING LANES</h1>
             </div>
-            <div class="podcast_txt_bottom" >
+            <div class="podcast_txt_bottom">
                 <bold>"Changing Lanes” is the official podcast of BMW. Featuring new episodes each week, in which our hosts take you on exciting journeys and talk about innovative technologies, lifestyle, design, cars and more. Find and subscribe to Changing Lanes on all major podcasting platforms.</bold>
             </div>
-            <button class="podcast_btn" >
+            <div class="podcast_btn">
                 Listen now
-            </button>
+            </div>
         </div>
-        <div class="podcast_img_container" >
-            <ul class="podcast_img_box" >
-                <li class="img_card" >
-                    <a href="#" alt="Audio column - The future of circularity">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity">
-                            <img src="/img/podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity"> 
-                        </picture>
-                    </a>
+        <div class="podcast_img_container">
+            <ul class="podcast_img_box">
+                <li class="img_card">
+                    <img src="/img/ang-00-teaser-high-modified.jpeg">
                     <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4 >Audio column</h4>
-                        <h5 >The future of circularity</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of circularity</h4>
                     </div>
                 </li>
-                <li class="img_card" >
-                    <a href="#">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art">
-                            <img src="/img/podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art">
-                        </picture>
-                    </a>
+                <li class="img_card">
+                    <img src="/img/tg-00-teaser-high-modified.jpeg">
                     <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4 >Audio column</h4>
-                        <h5 >The future of visual art</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of visual art</h4>
                     </div>
                 </li>
-                <li class="img_card" >
-                    <a href="#">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow">
-                            <img src="/img/podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow">
-                        </picture>
-                    </a>
+                <li class="img_card">
+                    <img src="/img/ir-00-teaser-high.jpg.asset.1644832893246.jpg">
                     <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4 >Young leaders</h4>
-                        <h5 >Acting today, changing tomorrow</h5>
-                    </div>
-                </li>
-                <li class="img_card" >
-                    <a href="#">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_4_adobe_express.jpeg" alt="Automotive sensors - The assistance systems">
-                            <img src="/img/podcast_img_4_adobe_express.jpeg" alt="Automotive sensors - The assistance systems">
-                        </picture>
-                    </a>
-                    <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4 >Automotive sensors</h4>
-                        <h5 >The assistance systems</h5>
-                    </div>
-                </li>
-                <li class="img_card" >
-                    <a href="#" >
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity">
-                            <img src="/img/podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity">
-                        </picture>
-                    </a>
-                    <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4 >Audio column</h4>
-                        <h5 >The future of circularity</h5>
-                    </div>
-                </li>
-                <li class="img_card" >
-                    <a href="#" >
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art">
-                            <img src="/img/podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art">
-                        </picture>
-                    </a>
-                    <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4 >Audio column</h4>
-                        <h5 >The future of visual art</h5>
-                    </div>
-                </li>
-                <li class="img_card" >
-                    <a href="#" >
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow">
-                            <img src="/img/podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow">
-                        </picture>
-                    </a>
-                    <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
+                        <img src="/img/microphone_black.png">
                         <h4>Young leaders</h4>
                         <h5>Acting today, changing tomorrow</h5>
                     </div>
                 </li>
-                <li class="img_card" >
-                    <a href="#">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_4_adobe_express.jpeg" alt="Automotive sensors - The assistance systems">
-                            <img src="/img/podcast_img_4_adobe_express.jpeg" alt="Automotive sensors - The assistance systems">
-                        </picture>
-                    </a>
+                <li class="img_card">
+                    <img src="/img/jv-00-teaser-high-modified.jpeg">
                     <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Automotive sensors</h4>
-                        <h5>The assistance systems</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Automotive sensors</h5>
+                        <h4>The assistance systems</h4>
                     </div>
                 </li>
-                <li class="img_card" >
-                    <a href="#">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity">
-                            <img src="/img/podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity">
-                        </picture>
-                    </a>
+                <li class="img_card">
+                    <img src="/img/ang-00-teaser-high.jpg.asset.1651758650191.jpg">
                     <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of circularity</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of circularity</h4>
                     </div>
                 </li>
-                <li class="img_card" >
-                    <a href="#">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow">
-                            <img src="/img/podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow">
-                        </picture>
-                    </a>
+                <li class="img_card">
+                    <img src="/img/tg-00-teaser-high.jpg.asset.1648029919821.jpg">
                     <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of visual art</h4>
+                    </div>
+                </li>
+                <li class="img_card">
+                    <img src="/img/ir-00-teaser-high.jpg.asset.1644832893246.jpg">
+                    <div class="img_info_box">
+                        <img src="/img/microphone_black.png">
                         <h4>Young leaders</h4>
                         <h5>Acting today, changing tomorrow</h5>
                     </div>
                 </li>
-                <li class="img_card" >
-                    <a href="#">
-                        <picture>
-                            <source media="(min-width: 768px) and (max-width: 1023px)" srcset="/img/t_podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art">
-                            <img src="/img/podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art">
-                        </picture>
-                    </a>
+                <li class="img_card">
+                    <img src="/img/jv-00-teaser-high-modified.jpeg">
                     <div class="img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of visual art</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Automotive sensors</h5>
+                        <h4>The assistance systems</h4>
+                    </div>
+                </li>
+                <li class="img_card">
+                    <img src="/img/ang-00-teaser-high.jpg.asset.1651758650191.jpg">
+                    <div class="img_info_box">
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of circularity</h4>
+                    </div>
+                </li>
+                <li class="img_card">
+                    <img src="/img/ir-00-teaser-high.jpg.asset.1644832893246.jpg">
+                    <div class="img_info_box">
+                        <img src="/img/microphone_black.png">
+                        <h4>Young leaders</h4>
+                        <h5>Acting today, changing tomorrow</h5>
+                    </div>
+                </li>
+                <li class="img_card">
+                    <img src="/img/tg-00-teaser-high.jpg.asset.1648029919821.jpg">
+                    <div class="img_info_box">
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of visual art</h4>
                     </div>
                 </li>
             </ul>
         </div>
+        
+        <span class="pod_left_arrow_box">
+            <img class="pod_left_arrow" src="/img/left-arrow.png">
+        </span>
+        <span class="pod_right_arrow_box">
+            <img class="pod_right_arrow" src="/img/left-arrow.png">
+        </span>
     </section>
     <section class="m_bmw_podcast_container">
         <div class="m_bmw_podcast_txt_container">
@@ -322,91 +211,91 @@
         <div class="m_podcast_img_container">
             <ul class="m_podcast_img_box">
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity"></a>
+                    <img src="/img/ang-00-teaser-high-modified.jpeg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of circularity</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of circularity</h4>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art"></a>
+                    <img src="/img/tg-00-teaser-high-modified.jpeg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of visual art</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of visual art</h4>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow"></a>
+                    <img src="/img/ir-00-teaser-high.jpg.asset.1644832893246.jpg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
+                        <img src="/img/microphone.png">
                         <h4>Young leaders</h4>
                         <h5>Acting today, changing tomorrow</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_4_adobe_express.jpeg" alt="Automotive sensors - The assistance systems"></a>
+                    <img src="/img/jv-00-teaser-high-modified.jpeg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Automotive sensors</h4>
-                        <h5>The assistance systems</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Automotive sensors</h5>
+                        <h4>The assistance systems</h4>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity"></a>
+                    <img src="/img/ang-00-teaser-high.jpg.asset.1651758650191.jpg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of circularity</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of circularity</h4>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art"></a>
+                    <img src="/img/tg-00-teaser-high.jpg.asset.1648029919821.jpg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of visual art</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of visual art</h4>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow"></a>
+                    <img src="/img/ir-00-teaser-high.jpg.asset.1644832893246.jpg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
+                        <img src="/img/microphone.png">
                         <h4>Young leaders</h4>
                         <h5>Acting today, changing tomorrow</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_4_adobe_express.jpeg" alt="Automotive sensors - The assistance systems"></a>
+                    <img src="/img/jv-00-teaser-high-modified.jpeg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Automotive sensors</h4>
-                        <h5>The assistance systems</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Automotive sensors</h5>
+                        <h4>The assistance systems</h4>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_1_adobe_express.jpeg" alt="Audio column - The future of circularity"></a>
+                    <img src="/img/ang-00-teaser-high.jpg.asset.1651758650191.jpg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of circularity</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of circularity</h4>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_3_adobe_express.jpeg" alt="Young leaders - Acting today, changing tomorrow"></a>
+                    <img src="/img/ir-00-teaser-high.jpg.asset.1644832893246.jpg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
+                        <img src="/img/microphone.png">
                         <h4>Young leaders</h4>
                         <h5>Acting today, changing tomorrow</h5>
                     </div>
                 </li>
                 <li class="m_img_card">
-                    <a href="#"><img src="/img/m_podcast_img_2_adobe_express.jpeg" alt="Audio column - The future of visual art"></a>
+                    <img src="/img/tg-00-teaser-high.jpg.asset.1648029919821.jpg">
                     <div class="m_img_info_box">
-                        <img src="/img/microphone.png" alt="">
-                        <h4>Audio column</h4>
-                        <h5>The future of visual art</h5>
+                        <img src="/img/microphone.png">
+                        <h5>Audio column</h5>
+                        <h4>The future of visual art</h4>
                     </div>
                 </li>
             </ul>
@@ -425,7 +314,7 @@
             
             <div class="main_txt_3_container">
                 <div class="main_txt_3_img_box">
-                    <a href="#" class="main_txt_3_a"><img class="right_arrow_txt" src="/img/left-arrow-black.png" alt=""></a>
+                    <img class="right_arrow_txt" src="/img/left-arrow-black.png">
                 </div>
                 <div class="main_txt_3_box">
                     <a href="#" class="main_txt_3">
@@ -436,174 +325,6 @@
             
         </div>
     </section>
-    
-    <!-- mutiple display -->
-    <section class="multiple_dis_container">
-        <div class="multiple_dis_one_box">
-            <iframe src="https://www.youtube.com/embed/zpOtbwoeidc?start=2&mute=1&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="multiple_dis_two_box">
-            <div class="multiple_dis_two_img_one_box">
-                <a href="#"><img src="/img/multiple_dis-1_adobe_express.jpeg" alt="BMW e-Sport"></a>
-                <div class="multiple_dis_two_one_info_box">
-                    <h1>Play for Fun</h1>
-                    <h2>E-Sports</h2>
-                </div>
-            </div>
-            <div class="multiple_dis_two_img_two_box">
-                <a href="#"><img src="/img/multiple_dis-2_adobe_express.jpeg" alt="BMW 4 Series Coupe"></a>
-                <div class="multiple_dis_two_two_info_box">
-                    <h1>New Speed, High Quality</h1>
-                    <h2>BMW i4 Coupe</h2>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="multiple_dis_container_2">
-        <div class="multiple_dis_2_one_box">
-            <div class="multiple_dis_2">
-                <iframe src="https://www.youtube.com/embed/Od5yC9qsu4Y?start=1&mute=1&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="multiple_dis_2">
-                <a href="#"><img src="/img/multiple_dis_2-1_adobe_express.jpeg" alt="BMW iX"></a>
-                <div class="multiple_dis_2_one_info_box">
-                    <h1>Keep Going</h1>
-                    <h2>BMW iX</h2>
-                </div>
-            </div>
-        </div>
-        <div class="multiple_dis_2_two_box">
-            <a href="#"><img src="/img/multiple_dis_2-2_adobe_express.jpeg" alt="bmw i7"></a>
-            <div class="multiple_dis_2_two_info_box">
-                <h1>Luxury Model</h1>
-                <h2>BMW i7</h2>
-            </div>
-        </div>
-    </section>
-    <section class="m_multiple_dis_container">
-        <div class="m_multiple_dis_box">
-            <iframe src="https://www.youtube.com/embed/zpOtbwoeidc?start=2&mute=1&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="m_multiple_dis_box">
-            <img src="/img/multiple_dis-1_adobe_express.jpeg" alt="BMW e-Sport">
-            <div class="multiple_dis_one_info_box">
-                <h1>Play for Fun</h1>
-                <h2>E-Sports</h2>
-            </div>
-        </div>
-        <div class="m_multiple_dis_box">
-            <img src="/img/multiple_dis-2_adobe_express.jpeg" alt="BMW 4 Series Coupe">
-            <div class="multiple_dis_two_info_box">
-                <h1>New Speed, High Quality</h1>
-                <h2>BMW i4 Coupe</h2>
-            </div>
-        </div>
-    </section>
-    <section class="m_multiple_dis_container_2">
-        <div class="m_multiple_dis_box_2">
-            <iframe src="https://www.youtube.com/embed/Od5yC9qsu4Y?start=1&mute=1&autoplay=1&loop=1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
-        <div class="m_multiple_dis_box_2">
-            <img src="/img/multiple_dis_2-1_adobe_express.jpeg" alt="BMW iX">
-            <div class="multiple_dis_two_one_info_box">
-                <h1>Keep Going</h1>
-                <h2>BMW iX</h2>
-            </div>
-        </div>
-        <div class="m_multiple_dis_box_2">
-            <img src="/img/multiple_dis_2-2_adobe_express.jpeg" alt="bmw i7">
-            <div class="multiple_dis_two_two_info_box">
-                <h1>Luxury Model</h1>
-                <h2>BMW i7</h2>
-            </div>
-        </div>
-    </section>
-</main>
-    
-
-<!--  footer -->
-<footer class="bmw_footer_container" role="contentinfo">
-    <nav class="bmw_footer_lang_nav">
-        <ul class="bmw_footer_lang_nav_ul">
-            <li class="bmw_footer_lang_nav_li active"><a href="#">English</a></li>
-            <li class="bmw_footer_lang_nav_li"><a href="#">Korean</a></li>
-            <li class="bmw_footer_lang_nav_li"><a href="#">Espanyol</a></li>
-            <li class="bmw_footer_lang_nav_li"><a href="#">Japanese</a></li>
-            <li class="bmw_footer_lang_nav_li"><a href="#">Chinese</a></li>
-        </ul>
-    </nav>
-    <section class="bmw_footer_link_container">
-        <div class="bmw_footer_link_box">
-            <div class="bmw_footer_link_title_box">
-                <h5>Quick Links</h5>
-            </div>
-            <nav class="bmw_footer_link_nav">
-                <ul class="bmw_footer_link_ul">
-                    <li class="bmw_footer_link_li"><a href="#">Home</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW in your country</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Careers</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">EU Detergents Regulation</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">REACH Regulation</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Compatibility Check</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Software Update</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Accessories Update</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Autonomous Driving</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Service Page Charging Products</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="bmw_footer_link_box">
-            <div class="bmw_footer_link_title_box">
-                <h5>More BMW Websites</h5>
-            </div>
-            <nav class="bmw_footer_link_nav">
-                <ul class="bmw_footer_link_ul">
-                    <li class="bmw_footer_link_li"><a href="#">BMW M</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Motorsport</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Golfsport</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Driving Exprerience</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Welt</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Group Classic</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Corporate/Direct Sales</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Group</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">BMW Group Culture</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="bmw_footer_link_box">
-            <div class="bmw_footer_link_title_box">
-                <h5>BMW.com</h5>
-            </div>
-            <nav class="bmw_footer_link_nav">
-                <ul class="bmw_footer_link_ul">
-                    <li class="bmw_footer_link_li"><a href="#">About BMW.com</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Contact</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Cookies</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Imprint</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Legal Notice / Data protection</a></li>
-                </ul>
-            </nav>
-        </div>
-
-        <div class="bmw_footer_link_box">
-            <div class="bmw_footer_link_title_box">
-                <h5>Visit us on</h5>
-            </div>
-            <nav class="bmw_footer_link_nav">
-                <ul class="bmw_footer_link_ul">
-                    <li class="bmw_footer_link_li"><a href="#">Facebook</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Twitter</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Instagram</a></li>
-                    <li class="bmw_footer_link_li"><a href="#">Youtube</a></li>
-                </ul>
-            </nav>
-        </div>
-        
-    </section>
-</footer>
-    
     <!-- Jquery -->
     <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
