@@ -151,3 +151,4 @@ $('.m_podcast_img_box').slick({
   arrows: false
 })
  
+AOS.init();
