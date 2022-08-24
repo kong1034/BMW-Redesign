@@ -565,6 +565,7 @@ button {
         height: 19.95vw;
         position: relative;
         border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
     }
     .multiple_dis_2_top > a {
         width: 40vw;
