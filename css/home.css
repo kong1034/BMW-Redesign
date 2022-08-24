@@ -181,11 +181,11 @@ button {
     /* content */
     .main_bg_container {
         overflow: hidden;
-        width: 99.9%;
-        border: 2px solid #fff;
+        width: 100vw;
+        border-bottom: 1px solid #fff;
     }
     .main_bg_container > .main_bg_box {
-        width: 100%;
+        width: 100vw;
         height: 100%;
         padding: 0;
     }
@@ -221,8 +221,8 @@ button {
         display: none;
     }
     .second_img_container {
-        border: 1px solid #fff;
-        width: 100%;
+        border-bottom: 1px solid #fff;
+        width: 100vw;
         height: 60vw;
         display: flex;
         justify-content: space-between;
@@ -231,14 +231,13 @@ button {
     .second_img_container > .img_box {
         width: 50%;
         height: 60vw;
-        border: 1px solid #fff;
     }
     .img_box > .second_img_one {
         width: 100%;
         height: 60vw;
         background-size: contain;
         transition: all 2s ease;
-        border: 1px solid #fff;
+        border-right: 1px solid #fff;
     }
     .img_box > .second_img_one:hover {
         opacity: 0.6;
@@ -249,7 +248,6 @@ button {
         height: 60vw;
         background-size: contain;
         transition: all 3s ease;
-        border: 1px solid #fff;
     }
     .img_box > .second_img_two:hover {
         opacity: 0.6;
@@ -324,11 +322,12 @@ button {
     }
     .bmw_podcast_container {
         background-color: #262626;
-        width: 99.9%;
+        width: 100vw;
         height: 40vw;
         display: flex;
         flex-direction: row;
-        border: 2px solid #fff;
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
         position: relative;
     }
     .podcast_txt_container > .podcast_btn {
@@ -350,7 +349,7 @@ button {
     .bmw_podcast_container > .podcast_txt_container {
         width: 20%;
         height: 100%;
-        border-right: 3px solid #fff;
+        border-right: 1px solid #fff;
         margin-right: 5px;
     }
     .bmw_podcast_container > .podcast_img_container {
@@ -481,14 +480,13 @@ button {
         display: none;
     }
     .multiple_dis_container {
-        border: 1px solid #fff;
-        width: 98.9vw;
+        border-bottom: 1px solid #fff;
+        width: 100vw;
         height: 80vw;
     }
     .multiple_dis_container > .multiple_dis_one_box {
-        width: 98.9vw;
+        width: 100vw;
         height: 40vw;
-        border: 1px solid #fff;
     }
     .multiple_dis_one_box > iframe {
         width: 100%;
@@ -496,7 +494,7 @@ button {
         border: 1px solid #fff;
     }
     .multiple_dis_container > .multiple_dis_two_box {
-        width: 100.1%;
+        width: 100vw;
         height: 40vw;
         display: flex;
         flex-direction: row;
@@ -504,6 +502,9 @@ button {
     .multiple_dis_two_box > .multiple_dis_two_img_one_box, .multiple_dis_two_img_two_box {
         width: 50%;
         height: 40vw;
+    }
+    .multiple_dis_two_box > .multiple_dis_two_img_one_box {
+        border-right: 1px solid #fff;
     }
     .multiple_dis_two_img_one_box > a {
         width: 100%;
@@ -514,7 +515,6 @@ button {
     .multiple_dis_two_img_one_box > a > img {
         width: 100%;
         height: 40vw;
-        border: 1px solid #fff;
     }
     .multiple_dis_two_img_one_box > .multiple_dis_two_one_info_box {
         position: absolute;
@@ -536,7 +536,6 @@ button {
     .multiple_dis_two_img_two_box > a > img {
         width: 100%;
         height: 40vw;
-        border: 1px solid #fff;
     }
     .multiple_dis_two_img_two_box > .multiple_dis_two_two_info_box {
         position: absolute;
@@ -550,60 +549,75 @@ button {
         color: #fff;
     }
     .multiple_dis_container_2 {
-        border: 1px solid #fff;
-        width: 98vw;
+        width: 100vw;
         height: 40vw;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_container_2 > .multiple_dis_2_one_box {
-        border: 1px solid #fff;
-        width: 39.95vw;
-        height: 20vw;
+        width: 40vw;
+        height: 39vw;
         display: block;
+        border-top: 1px solid #fff;
     }
-    .multiple_dis_2_one_box > .multiple_dis_2 {
-        width: 39.95vw;
-        height: 20vw;
-        border: 1px solid #fff;
-        position: relative;
-    }
-    .multiple_dis_2 > a {
-        width: 39.95vw;
-        height: 20vw;
-    }
-    .multiple_dis_2 > iframe {
-        width: 39.95vw;
-        height: 20vw;
-        border: 1px solid #fff;
-    }
-    .multiple_dis_2 > a > img {
-        width: 39.95vw;
+    .multiple_dis_2_one_box > .multiple_dis_2_top {
+        width: 40vw;
         height: 19.95vw;
-        border: 2px solid #fff;
+        position: relative;
+        border-bottom: 1px solid #fff;
     }
-    .multiple_dis_2 > .multiple_dis_2_one_info_box {
+    .multiple_dis_2_top > a {
+        width: 40vw;
+        height: 19.95vw;
+    }
+    .multiple_dis_2_top > iframe {
+        width: 40vw;
+        height: 19.95vw;
+    }
+    .multiple_dis_2_top > a > img {
+        width: 40vw;
+        height: 19.95vw;
+    }
+    .multiple_dis_2_one_box > .multiple_dis_2_bottom {
+        width: 40vw;
+        height: 20vw;
+        position: relative;
+        border-top: 1px solid #fff;
+    }
+    .multiple_dis_2_bottom > a {
+        width: 100%;
+        height: 100%;
+    }
+    .multiple_dis_2_bottom > iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .multiple_dis_2_bottom > a > img {
+        width: 100%;
+        height: 100%;
+    }
+    .multiple_dis_2_bottom > .multiple_dis_2_one_info_box {
         position: absolute;
         top: 60%;
         left: 1vw;
         color: #fff;
     }
     .multiple_dis_container_2 > .multiple_dis_2_two_box {
-        border: 1px solid #fff;
         width: 60vw;
         height: 40vw;
         display: block;
         position: relative;
+        border-left: 1px solid #fff;
+        border-top: 1px solid #fff;
     }
     .multiple_dis_2_two_box > a {
-        width: 60vw;
-        height: 40vw;
+        width: 100%;
+        height: 100%;
         display: block;
     }
     .multiple_dis_2_two_box > a > img {
-        width: 59vw;
-        height: 40vw;
-        border: 2px solid #fff;
+        width: 100%;
+        height: 100%;
     }
     .multiple_dis_2_two_box > .multiple_dis_2_two_info_box {
         position: absolute;
@@ -614,11 +628,11 @@ button {
 
     /* footer */
     .bmw_footer_container {
-        width: 99vw;
+        width: 100vw;
         height: auto;
         background-color: #262626;
         padding: 2vw 0 2vw 0;
-        
+        border-top: 3px solid #fff;
     }
     .bmw_footer_container > .bmw_footer_lang_nav {
         width: 60vw;
@@ -792,37 +806,41 @@ button {
 
     /* content */
     .main_bg_container {
-        width: 99.9%;
-        height: 50%;
+        width: 100vw;
+        height: 50vw;
         overflow: hidden;
-        border: 2px solid #fff;
+        border-bottom: 1px solid #fff;
     }
     .main_bg_container > .main_bg_box {
-        width: 99.9%;
-        height: 50%;
+        width: 100%;
+        height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
         transition: all 0.85s ease;
         padding: 0;
-        border: 1px solid #fff;
     }
     .main_bg_box > .main_bg_li {
         width: 100%;
         height: 50%;
+        position: relative;
         display: flex;
         justify-content: center;
         flex-direction: row;
     }
+    .main_bg_li > a {
+        width: 100%;
+        height: 100%;
+    }
     .main_bg_li > a > img {
         width: 100%;
-        height: 50vh;
+        height: 100%;
     }
     .main_bg_li > .main_bg_info_box {
         position: absolute;
         width: 30vw;
         height: 7vw;
-        top: 85%;
+        top: 40vw;
         margin-left: 3vw;
     }
     .main_bg_info_box > h1, h2 {
@@ -840,35 +858,34 @@ button {
         display: none;
     }
     .second_img_container {
-        border: 1px solid #fff;
-        width: 100%;
-        height: 65vh;
+        border-bottom: 1px solid #fff;
+        width: 100vw;
+        height: 65vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: relative;
     }
     .second_img_container > .img_box {
-        width: 100.5%;
+        width: 100%;
         height: 100%;
-        border: 1px solid #fff;
     }
     .img_box > .second_img_one {
-        width: 100.5%;
+        width: 100%;
         height: 100%;
         transition: all 2s ease;
-        border: 2px solid #fff;
+        border-right: 1px solid #fff;
     }
     .img_box > .second_img_two {
-        width: 100.5%;
+        width: 100%;
         height: 100%;
         transition: all 3s ease;
-        border: 2px solid #fff;
     }
     .second_img_container > .second_img_one_info_box {
         position: absolute;
         width: 40vw;
         height: 13vw;
-        top: 102%;
+        top: 50vw;
         margin-left: 1vw;
     }
     .second_img_one_info_box > strong {
@@ -893,7 +910,7 @@ button {
         position: absolute;
         width: 40vw;
         height: 13vw;
-        top: 102%;
+        top: 50vw;
         left: 50vw;
         margin-left: 1vw;
     }
@@ -923,9 +940,9 @@ button {
     .bmw_podcast_container {
         background-color: #262626;
         display: flex;
-        width: 100%;
+        width: 100vw;
         height: 60vw;
-        border: 2px solid #fff;
+        border-bottom: 1px solid #fff;
     }
     .podcast_txt_container > .podcast_btn {
         border: 1px solid #fff;
@@ -946,7 +963,7 @@ button {
     .bmw_podcast_container > .podcast_txt_container {
         width: 100%;
         height: 60vw;
-        border-right: 3px solid #fff;
+        border-right: 1px solid #fff;
         padding-right: 1vw;
     }
     .bmw_podcast_container > .podcast_img_container {
@@ -997,10 +1014,10 @@ button {
         height: 15vw;
         color: #fff;
         font-size: 2.5vw;
+        margin-left: 3vw;
     }
     .img_info_box > img {
         height: 30px;
-        height: 30px;;
     }
 
     /* content txt */
@@ -1011,6 +1028,7 @@ button {
         justify-content: center;
         align-items: center;
         border: 1px solid #fff;
+        margin: 3vw 0 3vw 0;
     }
     .main_txt_container > .main_txt_box {
         width: 80%;
@@ -1049,24 +1067,23 @@ button {
         display: none;
     }
     .multiple_dis_container {
-        border: 1px solid #fff;
-        width: 98vw;
+        border-bottom: 1px solid #fff;
+        width: 100vw;
         height: 100vw;
     }
     .multiple_dis_container > .multiple_dis_one_box {
-        width: 98vw;
-        height: 50vw;
-        border: 1px solid #fff;
+        width: 100%;
+        height: 50%;
     }
     .multiple_dis_one_box > iframe {
         width: 100%;
         height: 100%;
-        border: 2px solid #fff;
     }
     .multiple_dis_container > .multiple_dis_two_box {
-        width: 100.1%;
+        width: 100%;
         height: 50vw;
-        border: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        border-top: 1px solid #fff;
         display: flex;
         flex-direction: row;
         position: relative;
@@ -1075,17 +1092,18 @@ button {
         width: 50%;
         height: 100%;
     }
+    .multiple_dis_two_box > .multiple_dis_two_img_one_box {
+        border-right: 1px solid #fff;
+    }
     .multiple_dis_two_img_one_box > a {
         width: 100%;
         height: 100%;
-        border: 1px solid #fff;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_two_img_one_box > a > img {
         width: 100%;
         height: 100%;
-        border: 2px solid #fff;
     }
     .multiple_dis_two_one_info_box {
         width: 20vw;
@@ -1107,7 +1125,6 @@ button {
     .multiple_dis_two_img_two_box > a > img {
         width: 100%;
         height: 100%;
-        border: 1px solid #fff;
     }
     .multiple_dis_two_two_info_box {
         width: 30vw;
@@ -1122,59 +1139,63 @@ button {
         color: #fff;
     }
     .multiple_dis_container_2 {
-        border: 1px solid #fff;
-        width: 98vw;
+        width: 100vw;
         height: 40vw;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_container_2 > .multiple_dis_2_one_box {
-        border: 1px solid #fff;
-        width: 37.7vw;
-        height: 40vw;
+        width: 40%;
+        height: 100%;
         display: block;
         position: relative;
     }
-    .multiple_dis_2_one_box > .multiple_dis_2 {
-        width: 37.7vw;
-        height: 20vw;
+    .multiple_dis_2_one_box > .multiple_dis_2_top {
+        width: 100%;
+        height: 50%;
+        border-bottom: 1px solid #fff;
     }
-    .multiple_dis_2 > a {
-        width: 37.7vw;
-        height: 20vw;
+    .multiple_dis_2_top > a {
+        width: 100%;
+        height: 50%;
     }
-    .multiple_dis_2 > iframe {
-        width: 37.7vw;
-        height: 20vw;
-        border: 2px solid #fff;
+    .multiple_dis_2_top > iframe {
+        width: 100%;
+        height: 100%;
     }
-    .multiple_dis_2 > a > img {
-        width: 37.7vw;
-        height: 20vw;
-        border: 2px solid #fff;
+    .multiple_dis_2_one_box > .multiple_dis_2_bottom {
+        width: 100%;
+        height: 50%;
     }
-    .multiple_dis_2_one_info_box {
+    .multiple_dis_2_bottom > a {
+        width: 100%;
+        height: 50%;
+    }
+    .multiple_dis_2_bottom > a > img {
+        width: 100%;
+        height: 100%;
+    }
+    .multiple_dis_2_bottom > .multiple_dis_2_one_info_box {
         position: absolute;
-        top: 75%;
-        left: 1%;
+        top: 10vw;
+        left: 1vw;
         color: #fff;
     }
     .multiple_dis_container_2 > .multiple_dis_2_two_box {
-        border: 1px solid #fff;
         width: 60vw;
         height: 40vw;
         display: block;
         position: relative;
+        border-left: 1px solid #fff;
     }
     .multiple_dis_2_two_box > a {
-        width: 60vw;
-        height: 40vw;
+        width: 100%;
+        height: 100%;
         display: block;
     }
     .multiple_dis_2_two_box > a > img {
-        width: 60.1vw;
-        height: 40vw;
-        border: 2px solid #fff;
+        width: 100%;
+        height: 100%;
     }
     .multiple_dis_2_two_box > .multiple_dis_2_two_info_box {
         position: absolute;
@@ -1185,10 +1206,11 @@ button {
 
     /* footer */
     .bmw_footer_container {
-        width: 97.8vw;
+        width: 100vw;
         height: auto;
         background-color: #262626;
         padding: 2vw 0 2vw 0;
+        border-top: 1px solid #fff;
         
     }
     .bmw_footer_container > .bmw_footer_lang_nav {
@@ -1210,7 +1232,7 @@ button {
         color: #8e8e8e;
     }
     .bmw_footer_container > .bmw_footer_link_container {
-        width: 97.8vw;
+        width: 100vw;
         height: 80%;
         margin-top: 5vw;
         display: flex;
@@ -1355,13 +1377,13 @@ button {
     /* content */
     .main_bg_container {
         overflow: hidden;
-        width: 96.5vw;
-        height: 40%;
-        border: 1px solid #fff;
-        margin-left: 1vw;
+        width: 100vw;
+        height: 55vw;
+        border-bottom: 1px solid #fff;
+        position: relative;
     }
     .main_bg_container > .main_bg_box {
-        width: 96.4vw;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -1370,93 +1392,88 @@ button {
         padding: 0;
     }
     .main_bg_box > .main_bg_li {
-        width: 96.4vw;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
         flex-direction: row;
     }
     .main_bg_li > a > img {
-        width: 96.4vw;
-        height: 40%;
+        width: 100%;
+        height: 100%;
     }
     .main_bg_li > .main_bg_info_box {
         position: absolute;
         width: 50vw;
         height: 9vw;
-        top: 78%;
+        top: 42vw;
         margin-left: 3vw;
     }
     .main_bg_info_box > h1, h2 {
         color: #fff;
     }
     .main_bg_info_box > h1 {
-        font-size: 4vw;
+        font-size: 5vw;
     }
     .main_bg_info_box > h2 {
-        font-size: 3vw;
+        font-size: 4vw;
     }
 
     /* second main bg */
     .second_img_container {
-        width: 100%;
-        height: 100%;
-        border: 1px solid #fff;
+        width: 100vw;
+        height: 100vw;
+        border-bottom: 1px solid #fff;
         display: none;
     }
-    .second_img_container > .img_box {
-        width: 100%;
-        height: 100%;
-    }
-    .img_box > a > .second_img_one {
-        width: 100%;
-        height: 50%;
-    }
-    .img_box > a > .second_img_two {
-        width: 100%;
-        height: 50%;
-    }
     .m_second_img_container {
-        width: 96vw;
-        height: 200%;
+        width: 100vw;
+        height: 200vw;
         display: block;
-        border: 4px solid #fff;
+        border-bottom: 1px solid #fff;
     }
     .m_second_img_container > .m_img_box {
-        width: 96vw;
-        height: 200%;
-        border: 1px solid #fff;
+        width: 100%;
+        height: 100%;
     }
     .m_img_box > .m_img_one_box {
-        width: 96vw;
-        height: 100%;
+        width: 100%;
+        height: 50%;
         position: relative;
     }
-    .m_img_box > .m_img_two_box {
-        width: 96vw;
+    .m_img_one_box > img{
+        width: 100%;
         height: 100%;
+    }
+    .m_img_box > .m_img_two_box {
+        width: 100%;
+        height: 50%;
         position: relative;
+    }
+    .m_img_two_box > img{
+        width: 100%;
+        height: 100%;
     }
     .m_img_one_box > .m_img_one_info_box {
         position: absolute;
-        top: 83%;
-        width: 60vw;
+        top: 85vw;
+        width: 40vw;
         height: 18vw;
         left: 3vw;
     }
     .m_img_one_info_box > h1 {
-        font-size: 7vw;
+        font-size: 5vw;
         color: #fff;
     }
     .m_img_two_box > .m_img_two_info_box {
         position: absolute;
-        top: 83%;
-        width: 40vw;
+        top: 85vw;
+        width: 30vw;
         height: 20vw;
         left: 3vw;
     }
     .m_img_two_info_box > h1 {
-        font-size: 7vw;
+        font-size: 5vw;
     }
 
     /* podcast */
@@ -1465,22 +1482,21 @@ button {
     }
     .m_bmw_podcast_container {
         background-color: #262626;
-        width: 98.5vw;
-        height: 250vw;
-        border: 2px solid #fff;
+        width: 100vw;
+        height: 242vw;
+        border-bottom: 1px solid #fff;
     }
     .m_bmw_podcast_container > .m_bmw_podcast_txt_container {
         width: 100%;
-        height: 120vw;
-        border: 2px solid #fff;
+        height: 45%;
     }
     .m_bmw_podcast_txt_container > .m_podcast_txt_top {
-        width: 96%;
-        height: 45vw;
+        width: 100%;
+        height: 35%;
         margin-left: 3vw;
     }
     .m_bmw_podcast_txt_container > .m_podcast_txt_bottom {
-        width: 96%;
+        width: 100%;
         height: 45%;
         margin: 1.5vw 0 0 3vw;
     }
@@ -1507,24 +1523,25 @@ button {
     }
     .m_bmw_podcast_container > .m_podcast_img_container {
         width: 100%;
-        height: 130vw;
-        border: 2px solid #fff;
+        height: 55%;
+        border-bottom: 1px solid #fff;
+        position: relative;
     }
     .m_podcast_img_container > .m_podcast_img_box {
         width: 100%;
-        height: 130vw;
+        height: 100%;
         padding: 0;
     }
     .m_podcast_img_box > .m_img_card, img {
         width: 100%;
-        height: 129vw;
+        height: 100%;
     }
     .m_img_card > .m_img_info_box {
         position: absolute;
         width: 80vw;
         height: 25vw;
         color: #fff;
-        top: 100vw;
+        top: 110vw;
         font-size: 4.5vw;
         padding: 2vw;
     }
@@ -1535,17 +1552,17 @@ button {
 
     /* content txt */
     .main_txt_container {
-        width: 99.7%;
+        width: 100vw;
         height: 25vw;
         display: flex;
         justify-content: center;
         align-items: center;
         border: 1px solid #fff;
-        margin-top: 5vw;
+        margin: 2vw 0 2vw 0;
     }
     .main_txt_container > .main_txt_box {
         width: 80%;
-        height: 25vw;
+        height: 100%;
         text-align: center;
         display: flex;
         flex-direction: column;
@@ -1583,79 +1600,101 @@ button {
         display: none;
     }
     .m_multiple_dis_container {
-        width: 97.5vw;
+        width: 100vw;
         height: 210vw;
-        border: 1px solid #fff;
-        margin-top: 1.5vw;
+        border-bottom: 1px solid #fff;
     }
     .m_multiple_dis_container_2 {
-        width: 97.5vw;
-        height: 210vw;
-        border: 1px solid #fff;
-        margin-bottom: 1vw;
+        width: 100vw;
+        height: 213vw;
     }
-    .m_multiple_dis_container > .m_multiple_dis_box, .m_multiple_dis_box_2 {
-        border: 1px solid #fff;
-        width: 97.5vw;
-        height: 70vw;
+    .m_multiple_dis_container > .m_multiple_dis_box_one, .m_multiple_dis_box_two {
+        width: 100%;
+        height: 33.3%;
+        position: relative;
+        border-bottom: 1px solid #fff;
+    }
+    .m_multiple_dis_box_three {
+        width: 100%;
+        height: 33.4%;
+    }
+    .m_multiple_dis_box_one > iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .m_multiple_dis_box_two > img {
+        width: 100%;
+        height: 100%;
         position: relative;
     }
-    .m_multiple_dis_box > iframe {
-        width: 97.5vw;
-        height: 70vw;
-        border: 2px solid #fff;
+    .m_multiple_dis_box_three > img {
+        width: 100%;
+        height: 100%;
     }
-    .m_multiple_dis_box > img {
-        width: 97.5vw;
-        height: 70vw;
-        border: 2px solid #fff;
-    }
-    .m_multiple_dis_box > .multiple_dis_one_info_box {
+    .m_multiple_dis_box_two > .multiple_dis_one_info_box {
         position: absolute;
         left: 3vw;
-        top: 75%;
+        top: 55vw;
         color: #fff;
     }
-    .m_multiple_dis_box > .multiple_dis_two_info_box {
+    .m_multiple_dis_box_three > .multiple_dis_two_info_box {
         position: absolute;
         left: 3vw;
-        top: 75%;
+        top: 55vw;
         color: #fff;
     }
-    .m_multiple_dis_box_2 > iframe {
-        width: 97.5vw;
-        height: 70vw;
-        border: 2px solid #fff;
+    .m_multiple_dis_container_2 > .m_multiple_dis_box_2_one {
+        width: 100%;
+        height: 33%;
+        border-bottom: 1px solid #fff;
     }
-    .m_multiple_dis_box_2 > img {
-        width: 97.5vw;
-        height: 70vw;
-        border: 2px solid #fff;
+    .m_multiple_dis_container_2 > .m_multiple_dis_box_2_two {
+        width: 100%;
+        height: 33.3%;
+        border-bottom: 1px solid #fff;
+        position: relative;
     }
-    .m_multiple_dis_box_2 > .multiple_dis_two_one_info_box {
+    .m_multiple_dis_container_2 > .m_multiple_dis_box_2_three {
+        width: 100%;
+        height: 33.7%;
+        position: relative;
+    }
+    .m_multiple_dis_box_2_one > iframe {
+        width: 100%;
+        height: 100%;
+    }
+    .m_multiple_dis_box_2_two > img {
+        width: 100%;
+        height: 100%;
+    }
+    .m_multiple_dis_box_2_three > img {
+        width: 100%;
+        height: 100%;
+    }
+    .m_multiple_dis_box_2_two > .multiple_dis_two_one_info_box {
         position: absolute;
         left: 3vw;
-        top: 75%;
+        top: 55vw;
         color: #fff;
     }
-    .m_multiple_dis_box_2 > .multiple_dis_two_two_info_box {
+    .m_multiple_dis_box_2_three > .multiple_dis_two_two_info_box {
         position: absolute;
         left: 3vw;
-        top: 75%;
+        top: 55vw;
         color: #fff;
     }
 
 
     /* footer */
     .bmw_footer_container {
-        width: 99vw;
+        width: 100vw;
         height: auto;
         background-color: #262626;
-        padding: 2vw 0 2vw 0;
-        
+        padding: 5vw 0 5vw 0;
+        border-top: 1px solid #fff;
     }
     .bmw_footer_container > .bmw_footer_lang_nav {
-        width: 60vw;
+        width: 65vw;
         height: 5%;
         margin: 0 auto;
     }
@@ -1665,19 +1704,20 @@ button {
         display: flex;
         justify-content: center;
         padding: 0;
+        margin: 0 auto;
     }
     .bmw_footer_lang_nav_ul > .bmw_footer_lang_nav_li {
-        margin: 1vw 2vw 0 0;
+        margin: 1vw 1.5vw 0 0;
     }
     .bmw_footer_lang_nav_li:not(.active) > a {
         color: #8e8e8e;
     }
     .bmw_footer_container > .bmw_footer_link_container {
-        width: 96vw;
+        width: 100%;
         height: 80%;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
     }
     .bmw_footer_link_container > .bmw_footer_link_box:nth-child(1) {
         width: 55vw;
