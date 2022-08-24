@@ -491,13 +491,13 @@ button {
     .multiple_dis_one_box > iframe {
         width: 100%;
         height: 40vw;
-        border: 1px solid #fff;
     }
     .multiple_dis_container > .multiple_dis_two_box {
         width: 100vw;
         height: 40vw;
         display: flex;
         flex-direction: row;
+        border-top: 1px solid #fff;
     }
     .multiple_dis_two_box > .multiple_dis_two_img_one_box, .multiple_dis_two_img_two_box {
         width: 50%;
