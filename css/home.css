@@ -3,7 +3,13 @@ body {
     font-size: 16px;
 }
 html,body {
-    height: 100%;
+    max-width: 100vw;
+    width: 100%;
+    height: auto;
+}
+main {
+    max-width: 100vw;
+    width: 100%;
 }
 *{
     margin: 0;
@@ -181,17 +187,18 @@ button {
     /* content */
     .main_bg_container {
         overflow: hidden;
-        width: 100vw;
-        border-bottom: 1px solid #fff;
+        width: 100%;
+        display: inline;
     }
     .main_bg_container > .main_bg_box {
-        width: 100vw;
         height: 100%;
+        width: 100%;
         padding: 0;
     }
     .main_bg_box > .main_bg_li {
         width: 100%;
         height: 100%;
+        position: relative;
     }
     .main_bg_li > a > .main_bg {
         width: 100%;
@@ -222,7 +229,8 @@ button {
     }
     .second_img_container {
         border-bottom: 1px solid #fff;
-        width: 100vw;
+        border-top: 1px solid #fff;
+        width: 100%;
         height: 60vw;
         display: flex;
         justify-content: space-between;
@@ -322,10 +330,9 @@ button {
     }
     .bmw_podcast_container {
         background-color: #262626;
-        width: 100vw;
+        width: 100%;
         height: 40vw;
-        display: flex;
-        flex-direction: row;
+        display: inline-flex;
         border-top: 1px solid #fff;
         border-bottom: 1px solid #fff;
         position: relative;
@@ -355,8 +362,7 @@ button {
     .bmw_podcast_container > .podcast_img_container {
         width: 80%;
         height: 39vw;
-        display: flex;
-        justify-content: space-around;
+        display: inline;
     }
     .podcast_img_container > .podcast_img_box{
         width: 80%;
@@ -364,12 +370,13 @@ button {
         padding: 0;
         transition: left .5s ease-out;
         overflow: hidden;
+        margin: 0 auto;
     }
     .podcast_txt_container > .podcast_txt_top {
         width: 100%;
         height: 12vw;
-        display: flex;
-        align-items: center;
+        display: block;
+        margin-top: 1vw;
     }
     .podcast_txt_top > h1 {
         font-size: 1.8vw;
@@ -481,40 +488,40 @@ button {
     }
     .multiple_dis_container {
         border-bottom: 1px solid #fff;
-        width: 100vw;
+        width: 100%;
         height: 80vw;
     }
     .multiple_dis_container > .multiple_dis_one_box {
-        width: 100vw;
-        height: 40vw;
+        width: 100%;
+        height: 50%;
     }
     .multiple_dis_one_box > iframe {
         width: 100%;
-        height: 40vw;
+        height: 100%;
     }
     .multiple_dis_container > .multiple_dis_two_box {
-        width: 100vw;
-        height: 40vw;
+        width: 100%;
+        height: 50%;
         display: flex;
         flex-direction: row;
         border-top: 1px solid #fff;
     }
     .multiple_dis_two_box > .multiple_dis_two_img_one_box, .multiple_dis_two_img_two_box {
         width: 50%;
-        height: 40vw;
+        height: 100%;
     }
     .multiple_dis_two_box > .multiple_dis_two_img_one_box {
         border-right: 1px solid #fff;
     }
     .multiple_dis_two_img_one_box > a {
         width: 100%;
-        height: 40vw;
+        height: 100%;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_two_img_one_box > a > img {
         width: 100%;
-        height: 40vw;
+        height: 100%;
     }
     .multiple_dis_two_img_one_box > .multiple_dis_two_one_info_box {
         position: absolute;
@@ -529,13 +536,13 @@ button {
     }
     .multiple_dis_two_img_two_box > a {
         width: 100%;
-        height: 40vw;
+        height: 100%;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_two_img_two_box > a > img {
         width: 100%;
-        height: 40vw;
+        height: 100%;
     }
     .multiple_dis_two_img_two_box > .multiple_dis_two_two_info_box {
         position: absolute;
@@ -549,39 +556,38 @@ button {
         color: #fff;
     }
     .multiple_dis_container_2 {
-        width: 100vw;
+        width: 100%;
         height: 40vw;
         display: flex;
         flex-direction: row;
     }
     .multiple_dis_container_2 > .multiple_dis_2_one_box {
-        width: 40vw;
-        height: 39vw;
+        width: 50%;
+        height: 100%;
         display: block;
         border-top: 1px solid #fff;
     }
     .multiple_dis_2_one_box > .multiple_dis_2_top {
-        width: 40vw;
-        height: 19.95vw;
+        width: 100%;
+        height: 50%;
         position: relative;
         border-bottom: 1px solid #fff;
-        border-top: 1px solid #fff;
     }
     .multiple_dis_2_top > a {
-        width: 40vw;
-        height: 19.95vw;
+        width: 100%;
+        height: 100%;
     }
     .multiple_dis_2_top > iframe {
-        width: 40vw;
-        height: 19.95vw;
+        width: 100%;
+        height: 100%;
     }
     .multiple_dis_2_top > a > img {
-        width: 40vw;
-        height: 19.95vw;
+        width: 100%;
+        height: 100%;
     }
     .multiple_dis_2_one_box > .multiple_dis_2_bottom {
-        width: 40vw;
-        height: 20vw;
+        width: 100%;
+        height: 50%;
         position: relative;
         border-top: 1px solid #fff;
     }
@@ -604,8 +610,8 @@ button {
         color: #fff;
     }
     .multiple_dis_container_2 > .multiple_dis_2_two_box {
-        width: 60vw;
-        height: 39vw;
+        width: 60%;
+        height: 100%;
         display: block;
         position: relative;
         border-left: 1px solid #fff;
@@ -629,19 +635,19 @@ button {
 
     /* footer */
     .bmw_footer_container {
-        width: 100vw;
+        width: 100%;
         height: auto;
         background-color: #262626;
         padding: 2vw 0 2vw 0;
         border-top: 3px solid #fff;
     }
     .bmw_footer_container > .bmw_footer_lang_nav {
-        width: 60vw;
+        width: 60%;
         height: 15%;
         margin: 0 auto;
     }
     .bmw_footer_lang_nav > .bmw_footer_lang_nav_ul {
-        width: 60vw;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: flex-start;
@@ -654,19 +660,19 @@ button {
         color: #8e8e8e;
     }
     .bmw_footer_container > .bmw_footer_link_container {
-        width: 60vw;
+        width: 60%;
         height: 80%;
         margin: 5vw auto;
         display: flex;
         justify-content: space-between;
     }
     .bmw_footer_link_container > .bmw_footer_link_box {
-        width: 13vw;
+        width: 20%;
         height: 100%;
     }
     .bmw_footer_link_box > .bmw_footer_link_title_box {
         border-bottom: 1px solid #8e8e8e;
-        width: 13vw;
+        width: 100%;
         height: 10%;
         padding: 1.5vw 1.5vw 1.5vw 0;
         text-align: start;
@@ -678,12 +684,12 @@ button {
         color: #fff;
     }
     .bmw_footer_link_box > .bmw_footer_link_nav {
-        width: 13vw;
+        width: 100%;
         height: 75%;
         margin-top: 2vw;
     }
     .bmw_footer_link_nav > .bmw_footer_link_ul {
-        width: 13vw;
+        width: 100%;
         height: 100%;
         padding: 0;
     }
@@ -1207,7 +1213,7 @@ button {
 
     /* footer */
     .bmw_footer_container {
-        width: 100vw;
+        width: 100%;
         height: auto;
         background-color: #262626;
         padding: 2vw 0 2vw 0;
@@ -1215,12 +1221,12 @@ button {
         
     }
     .bmw_footer_container > .bmw_footer_lang_nav {
-        width: 60vw;
+        width: 60%;
         height: 15%;
         margin: 0 auto;
     }
     .bmw_footer_lang_nav > .bmw_footer_lang_nav_ul {
-        width: 60vw;
+        width: 100%;
         height: 100%;
         display: flex;
         justify-content: center;
@@ -1233,19 +1239,19 @@ button {
         color: #8e8e8e;
     }
     .bmw_footer_container > .bmw_footer_link_container {
-        width: 100vw;
+        width: 100%;
         height: 80%;
         margin-top: 5vw;
         display: flex;
         justify-content: space-between;
     }
     .bmw_footer_link_container > .bmw_footer_link_box {
-        width: 20vw;
+        width: 20%;
         height: 100%;
     }
     .bmw_footer_link_box > .bmw_footer_link_title_box {
         border-bottom: 1px solid #8e8e8e;
-        width: 17vw;
+        width: 17%;
         height: 10%;
         padding: 1.5vw 1.5vw 1.5vw 0;
         text-align: start;
@@ -1258,7 +1264,7 @@ button {
         color: #fff;
     }
     .bmw_footer_link_box > .bmw_footer_link_nav {
-        width: 19vw;
+        width: 20%;
         height: 75%;
         margin: 2vw 0 0 1vw;
     }
